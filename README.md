@@ -1,26 +1,34 @@
 ﻿# [RDA8810](https://github.com/mcuyun/RDA8810) 
 
-RDA8810超级SOC，超高性价比，拥有1GHz处理能力的单品机SOC，完全是高性能单片机终极替换者，还有无线通信基带集成，主要是价格感人
-
 [![sites](mcuyun/mcuyun.png)](http://www.mcuyun.com)
 
-#### 更多[MCU](https://github.com/mcuyun/whyme)可访问 www.mcuyun.com
+#### 归属：[cortex A5系列](https://github.com/mcuyun/CA5)
+#### [关于悠云](https://github.com/mcuyun)可访问 www.mcuyun.com
 
----
+## [描述](https://github.com/mcuyun/CA5/wiki) 
 
-## 工程内容
+[![sites](docs/8810.png)](http://www.mcuyun.com)
+
+RDA8810使用40nm工艺，在单芯片上集成了arm Cortex A5处理器，拥有1GHz主频,专用的调制解调器，射频芯片以及能源管理系统，这个产品的集成度高，性价比超高，是高性能MCU的替换者。
+
+主要特点：集成256MB DDR2，集成512MB NAND Flash
+
+功能特点：该有的接口和功能都有
+
+主要短板：发布太久，所有规格都比较老旧
+
+封装：LFBGA 14X16, 325 ball
+
+#### [Orange Pi](https://github.com/orangepi-xunlong/OrangePi_Build)
+
+OrangePi 2G IOT工程
 
 #### [docs](docs/README.md)
 
-包括相关产品手册
-
-#### [orange](https://github.com/orangepi-xunlong/OrangePi_Build)
-
-OrangePi 工程
-
+参考设计和数据手册
 
 
 ---
 
-###  www.mcuyun.com   
+###  [悠云，为嵌入式](http://www.mcuyun.com)   
 ###  qitas@qitas.cn
