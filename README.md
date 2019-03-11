@@ -1,15 +1,14 @@
-﻿# [RDA8810](https://github.com/mcuyun/RDA8810) 
+﻿# [RDA8810](https://github.com/sochub/RDA8810) 
 
-[![sites](mcuyun/mcuyun.png)](http://www.mcuyun.com)
+[![sites](SoC/SoC.png)](http://www.qitas.cn) 
 
-#### 归属：[cortex A5系列](https://github.com/mcuyun/CA5)
-#### [关于悠云](https://github.com/mcuyun)可访问 www.mcuyun.com
+#### 归属：[cortex A5](https://github.com/sochub/CA5)
 
-## [描述](https://github.com/mcuyun/CA5/wiki) 
+## [描述](https://github.com/sochub/RDA8810/wiki) 
 
-[![sites](docs/8810.png)](http://www.mcuyun.com)
+RDA8810PL 使用40nm工艺，在单芯片上集成Cortex A5 单核处理器，拥有1GHz主频，专用的调制解调器，射频芯片以及能源管理系统，这个产品的集成度高，用于早期的手机，当前的性价比超高，是高性能MCU的理想替换者。
 
-RDA8810使用40nm工艺，在单芯片上集成了arm Cortex A5处理器，拥有1GHz主频,专用的调制解调器，射频芯片以及能源管理系统，这个产品的集成度高，性价比超高，是高性能MCU的替换者。
+[![sites](docs/RDA8810PL.png)](http://www.qitas.cn)  
 
 主要特点：集成256MB DDR2，集成512MB NAND Flash
 
@@ -19,16 +18,13 @@ RDA8810使用40nm工艺，在单芯片上集成了arm Cortex A5处理器，拥�
 
 封装：LFBGA 14X16, 325 ball
 
-#### [Orange Pi](https://github.com/orangepi-xunlong/OrangePi_Build)
-
-OrangePi 2G IOT工程
-
-#### [docs](docs/README.md)
+#### [docs](docs/)
 
 参考设计和数据手册
 
 
 ---
 
-###  [悠云，为嵌入式](http://www.mcuyun.com)   
+###  [SoC开发平台](http://www.qitas.cn)   
+
 ###  qitas@qitas.cn
