@@ -1,0 +1,14 @@
+menuconfig FMRADIO
+	tristate "FM Radio Support"
+	help
+	  Say Y here to enable fmradio support.
+
+if FMRADIO
+
+config FMRADIO_RDA599X
+	tristate "RDA599X fm support"
+	depends on I2C
+	help
+	  Say Y here to enable RDA599X fmradio support.
+
+endif # FMRADIO

@@ -1,0 +1,66 @@
+#
+# RDA599X Wireless LAN device configuration
+#
+menuconfig RDA_WLAN
+	bool "Rda wireless(wifi bt fm) power driver and Rda wifi driver"
+	---help---
+		Need to enable this for RDA wifi bt fm.
+
+if RDA_WLAN
+config RDACBDEV
+	bool "RdaMicro 599X Wireless Combo Chip Support"
+	depends on I2C
+	default n
+	---help---
+	  This option enables pmu support for RdaMicro 599X Wireless ComBo Chip.
+	  Say Y if you want to control the chip power.
+
+config RDAWFMAC
+	tristate "Rdamicro IEEE802.11 embedded FullMac WLAN driver"
+	depends on CFG80211
+  	depends on RDACBDEV
+	---help---
+	  This module adds support for embedded wireless adapters based on
+	  Rdamicro IEEE802.11bgn FullMAC chipsets. It has to work with at least
+	  one of the bus interface support. If you choose to build a module,
+	  it'll be called rdawfmac.ko.
+
+if RDAWFMAC
+config RDAWFMAC_WEXT
+	bool "Enable WEXT support"
+	depends on RDAWFMAC && CFG80211 = n
+	select WIRELESS_EXT
+	select WEXT_PRIV
+	default n
+	---help---
+	  Enables WEXT support
+
+config RDAWFMAC_SDIO
+	bool "SDIO bus interface support for FullMac driver"
+	depends on MMC
+	depends on RDAWFMAC
+	default y
+	---help---
+	  This option enables the SDIO bus interface support for Rdamicro
+	  IEEE802.11n embedded FullMAC WLAN driver. Say Y if you want to
+	  use the driver for a SDIO wireless card.
+
+config RDAWFMAC_USB
+	bool "USB bus interface support for FullMAC driver"
+	depends on USB
+	depends on RDAWFMAC
+	default n
+	---help---
+	  This option enables the USB bus interface support for Rdamicro
+	  IEEE802.11n embedded FullMAC WLAN driver. Say Y if you want to
+	  use the driver for an USB wireless card.
+
+config RDAWDBG
+	bool "RdaMicro driver debug functions"
+	depends on RDAWFMAC
+	default y
+	---help---
+	  Selecting this enables additional code for debug purposes.
+endif # RDAWFMAC
+
+endif # RDA_WLAN

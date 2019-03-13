@@ -1,0 +1,20 @@
+#
+# Multimedia Video device configuration
+#
+
+menuconfig ATV_ADAPTERS
+	bool "Analog TV Adapters"
+	depends on VIDEO_V4L2
+	default y
+	---help---
+	  Say Y here to enable selecting analog tv adapters.
+
+if ATV_ADAPTERS && VIDEO_V4L2
+
+config ATV_RDA5888
+	bool "rda5888 analog tv support"
+	depends on VIDEO_V4L2
+	---help---
+	  This is a rda5888 analog tv driver.
+
+endif # RADIO_ADAPTERS

@@ -1,0 +1,6 @@
+config MTD_RDA_NFTL
+	tristate "RNFTL (RDA NAND Flash Translation Layer) support"
+	depends on BLOCK
+	select MTD_BLKDEVS
+	help
+		rda nftl support

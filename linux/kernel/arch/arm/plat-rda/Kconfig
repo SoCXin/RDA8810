@@ -1,0 +1,22 @@
+config PLAT_RDA
+	bool
+	depends on ARCH_RDA
+	help
+	  Base platform code for all RDA SoC based systems
+
+config RDA_ISPI
+	bool
+	help
+          Use AP ISPI3 to W/R PMU/PLL regs instead of mdsys.
+
+config VPU_DDR_TIMING_BUG
+	bool
+	help
+	  for VPU DDR Timing bug, lower DDR freq to 200MHZ when VPU is to open
+          and restore DDR freq when vpu is closed.
+
+config RDA_AP_PLL_FREQ_ADJUST
+	bool
+	help
+	  for AP PLL adjust based on thermal message from modem
+

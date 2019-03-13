@@ -1,0 +1,28 @@
+menu "Soc Audio for the RDA FPGA chips."
+
+
+config SND_RDA_SOC_FPGA
+	tristate "SoC Audio for the RDA FPGA"
+	depends on ARCH_RDA
+
+config SND_RDA_SOC_RDASOUNDCARD_FPGA
+	tristate "rda FPGA sound card -- SoC Audio support for RAD FPGA boards."
+	depends on SND_RDA_SOC_FPGA
+	select SND_RDA_SOC_RDASOUNDCARD_FPGA_PCM
+	select SND_RDA_SOC_RDASOUNDCARD_FPGA_DAI
+	select SND_SOC_TLV320AIC23
+	help
+	  Say Y if you want to build in to kernel, Say M for module.
+
+config SND_RDA_SOC_RDASOUNDCARD_FPGA_PCM
+	tristate
+
+
+config SND_RDA_SOC_RDASOUNDCARD_FPGA_DAI
+	tristate
+
+config SND_SOC_TLV320AIC23
+	tristate
+
+
+endmenu

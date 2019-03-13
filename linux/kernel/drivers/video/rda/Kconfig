@@ -1,0 +1,56 @@
+config RDA_GOUDA
+	tristate "RDA GOUDA support"
+	depends on ARCH_RDA
+	help
+          RDA GOUDA.
+
+config FB_RDA
+	tristate "RDA frame buffer support"
+	depends on FB && RDA_GOUDA
+	select FB_CFB_FILLRECT
+	select FB_CFB_COPYAREA
+	select FB_CFB_IMAGEBLIT
+	help
+          Frame buffer driver for RDA based boards.
+
+config FB_RDA_DBI
+	depends on FB_RDA
+	bool
+	default y
+
+config FB_RDA_DPI
+	depends on FB_RDA
+	bool
+	default y
+
+config FB_RDA_DSI
+	depends on FB_RDA
+	bool
+	default y
+
+config FB_UNLOCK_FOR_GOUDA_SCALAR
+	tristate "set unlock mode for gouda used as scalar"
+	depends on FB
+	default y
+	---help---
+	  when Gouda is used as scalar, we need to void lock for flip.
+
+
+config FB_RDA_VSYNC_ENABLE
+	bool "RDA gouda vsync enable"
+	depends on RDA_GOUDA
+	help
+	 Say Y here if you want to enable vsync.
+
+config FB_RDA_USE_ION
+	bool "RDA gouda use ION driver"
+	depends on FB_RDA
+	select ION_RDA
+	help
+	 Say Y here if you want to use ION.
+
+config FB_RDA_DBI_BLIT_ENABLE
+	bool "RDA DBI mode support"
+	depends on FB_RDA
+	help
+	 Say Y here if you want to enable gouda blit for dbi panel.

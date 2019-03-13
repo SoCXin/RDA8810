@@ -1,0 +1,17 @@
+config RDA_GPADC
+	tristate "RDA gpadc support"
+	depends on !RDA_FPGA
+	help
+	  Say Y here to enable rda gpadc support.
+
+config RDA_CALIB
+	tristate "RDA calib data support"
+	depends on !RDA_FPGA
+	help
+	  Say Y here to enable rda calib support.
+
+config RDA_MODEM_CORE_DUMP
+	tristate "RDA modem cpu core-dump"
+	depends on ARCH_RDA8850E
+	help
+	  Say Y here to enable Core dump devices for WCPU and XCPU.

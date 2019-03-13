@@ -1,0 +1,28 @@
+menu "Soc Audio for the RDA chips."
+
+
+config SND_RDA_SOC
+	tristate "SoC Audio for the RDA."
+	depends on ARCH_RDA && !RDA_FPGA
+
+config SND_RDA_SOC_RDASOUNDCARD
+	tristate "rda CHIP sound card -- SoC Audio support for RAD chip."
+	depends on SND_RDA_SOC
+	select SND_RDA_SOC_RDASOUNDCARD_PCM
+	select SND_RDA_SOC_RDASOUNDCARD_DAI
+	select SND_RDA_SOC_RDASOUNDCARD_CODEC
+	help
+	  Say Y if you want to build in to kernel, Say M for module.
+
+config SND_RDA_SOC_RDASOUNDCARD_PCM
+	tristate
+
+config SND_RDA_SOC_RDASOUNDCARD_DAI
+	tristate
+
+config SND_RDA_SOC_RDASOUNDCARD_CODEC
+	tristate
+
+endmenu
+
+

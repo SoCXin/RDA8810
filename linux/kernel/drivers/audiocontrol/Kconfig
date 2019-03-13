@@ -1,0 +1,5 @@
+menuconfig AUDIOCONTROL
+	tristate "AudioControl class support"
+	help
+	  Say Y here to enable audio control class support. This allows
+	  control audio by userspace via sysfs and uevent.

@@ -1,0 +1,603 @@
+#ifndef _GC0313_CFG_H_
+#define _GC0313_CFG_H_
+
+#include "rda_sensor.h"
+#include <linux/delay.h>
+
+#ifdef BIT
+#undef BIT
+#endif
+#define BIT	8
+
+static struct sensor_reg exp_gc0313[][3] =
+{
+	{{0xfe,0x01,BIT,0},{0x13,0x30,BIT,0},{0xfe,0x00,BIT,0}},
+	{{0xfe,0x01,BIT,0},{0x13,0x38,BIT,0},{0xfe,0x00,BIT,0}},
+	{{0xfe,0x01,BIT,0},{0x13,0x40,BIT,0},{0xfe,0x00,BIT,0}},
+	{{0xfe,0x01,BIT,0},{0x13,0x50,BIT,0},{0xfe,0x00,BIT,0}},
+	{{0xfe,0x01,BIT,0},{0x13,0x58,BIT,0},{0xfe,0x00,BIT,0}},
+	{{0xfe,0x01,BIT,0},{0x13,0x60,BIT,0},{0xfe,0x00,BIT,0}},
+	{{0xfe,0x01,BIT,0},{0x13,0x68,BIT,0},{0xfe,0x00,BIT,0}},
+};
+
+static struct sensor_reg awb_gc0313[][4] =
+{
+	{{0x42,0xfd,BIT,0},{0x77,0x57,BIT,0},{0x78,0x4d,BIT,0},{0x79,0x45,BIT,0}},//OFF
+	{{0x42,0xfe,BIT,0},{0x77,0x57,BIT,0},{0x78,0x4d,BIT,0},{0x79,0x45,BIT,0}},//AUTO
+	{{0x42,0xfd,BIT,0},{0x77,0x48,BIT,0},{0x78,0x40,BIT,0},{0x79,0x5c,BIT,0}},//INCANDESCENT
+	{{0x42,0xfd,BIT,0},{0x77,0x40,BIT,0},{0x78,0x42,BIT,0},{0x79,0x50,BIT,0}},//FLUORESCENT
+	{{0x42,0xfd,BIT,0},{0x77,0x40,BIT,0},{0x78,0x54,BIT,0},{0x79,0x70,BIT,0}},//TUNGSTEN
+	{{0x42,0xfd,BIT,0},{0x77,0x74,BIT,0},{0x78,0x52,BIT,0},{0x79,0x40,BIT,0}},//DAYLIGHT
+	{{0x42,0xfd,BIT,0},{0x77,0x8c,BIT,0},{0x78,0x50,BIT,0},{0x79,0x40,BIT,0}},//CLOUD
+};
+
+// use this for 640x480 (VGA) capture
+static struct sensor_reg vga_gc0313[] =
+{
+	{0xfe,0x00,BIT,0},
+	{0x59,0x11,BIT,0},
+	{0x50,0x01,BIT,0},
+	{0x55,0x01,BIT,0},
+	{0x56,0xe0,BIT,0},
+	{0x57,0x02,BIT,0},
+	{0x58,0x80,BIT,0},
+	{0xfe,0x03,BIT,0},
+	{0x12,0x00,BIT,0},
+	{0x13,0x05,BIT,0},
+	{0x04,0x80,BIT,0}, //fifo_pro low 8bit
+	{0x05,0x00,BIT,0},
+	{0xfe,0x00,BIT,0},
+};
+
+// use this for 320x240 (QVGA) capture
+static struct sensor_reg qvga_gc0313[] =
+{
+	{0xfe,0x00,BIT,0},
+	{0x59,0x22,BIT,0},
+	{0x50,0x01,BIT,0},
+	{0x55,0x00,BIT,0},
+	{0x56,0xf0,BIT,0},
+	{0x57,0x01,BIT,0},
+	{0x58,0x40,BIT,0},
+	{0xfe,0x03,BIT,0},
+	{0x12,0x80,BIT,0},
+	{0x13,0x02,BIT,0},
+	{0x04,0x40,BIT,0}, //fifo_pro low 8bit
+	{0x05,0x00,BIT,0},
+	{0xfe,0x00,BIT,0},
+};
+
+// use this for 160x120 (QQVGA) capture
+static struct sensor_reg qqvga_gc0313[] =
+{
+	{0xfe,0x00,BIT,0},
+	{0x59,0x44,BIT,0},
+	{0x50,0x01,BIT,0},
+	{0x55,0x00,BIT,0},
+	{0x56,0x78,BIT,0},
+	{0x57,0x00,BIT,0},
+	{0x58,0xa0,BIT,0},
+	{0xfe,0x03,BIT,0},
+	{0x12,0x40,BIT,0},
+	{0x13,0x01,BIT,0},
+	{0x04,0x20,BIT,0}, //fifo_pro low 8bit
+	{0x05,0x00,BIT,0},
+	{0xfe,0x00,BIT,0},
+};
+
+// use this for 176x144 (QCIF) capture
+static struct sensor_reg qcif_gc0313[] =
+{
+	{0xfe,0x00,BIT,0},
+	{0x59,0x22,BIT,0},
+	{0x50,0x01,BIT,0},
+	{0x55,0x00,BIT,0},
+	{0x56,0x90,BIT,0},
+	{0x57,0x00,BIT,0},
+	{0x58,0xb0,BIT,0},
+	{0xfe,0x03,BIT,0},
+	{0x12,0x60,BIT,0},
+	{0x13,0x01,BIT,0},
+	{0x04,0x20,BIT,0}, //fifo_pro low 8bit
+	{0x05,0x00,BIT,0},
+	{0xfe,0x00,BIT,0},
+};
+
+// use this for init sensor
+static struct sensor_reg init_gc0313[] =
+{
+	{0xfe,0x80,BIT,0},
+	{0xfe,0x80,BIT,0},
+	{0xfe,0x80,BIT,0},
+	{0xf1,0xf0,BIT,0},
+	{0xf2,0x00,BIT,0},
+	{0xf6,0x03,BIT,0},
+	{0xf7,0x03,BIT,0},
+	{0xfc,0x1e,BIT,0},
+
+	{0xfe,0x00,BIT,0},
+	{0x42,0xfd,BIT,0},
+	{0x77,0x6f,BIT,0},
+	{0x78,0x40,BIT,0},
+	{0x79,0x54,BIT,0},
+	{0x42,0xff,BIT,0},
+	/////////////////////////////////////////////////////
+	////////////////// Window Setting ///////////////////
+	/////////////////////////////////////////////////////
+	{0x0d,0x01,BIT,0},
+	{0x0e,0xe8,BIT,0},
+	{0x0f,0x02,BIT,0},
+	{0x10,0x88,BIT,0},
+	{0x05,0x02,BIT,0}, //HB 326
+	{0x06,0x2c,BIT,0},
+	{0x07,0x00,BIT,0}, //VB
+	{0x08,0xf0,BIT,0},//0x48
+	{0x09,0x00,BIT,0},
+	{0x0a,0x00,BIT,0},
+	{0x0b,0x00,BIT,0},
+	{0x0c,0x04,BIT,0},
+	/////////////////////////////////////////////////////
+	////////////////// Analog & CISCTL //////////////////
+	/////////////////////////////////////////////////////
+	{0x17,0x14,BIT,0},
+	{0x19,0x04,BIT,0},
+	{0x1b,0x48,BIT,0},
+	{0x1f,0x08,BIT,0},
+	{0x20,0x01,BIT,0},
+	{0x21,0x48,BIT,0},
+	{0x22,0x9a,BIT,0},
+	{0x23,0x07,BIT,0},
+	{0x24,0x3f,BIT,0}, //{0x24, 0x16,0}, driver
+	/////////////////////////////////////////////////////
+	/////////////////// ISP Realated ////////////////////
+	/////////////////////////////////////////////////////
+	{0x40,0xdf,BIT,0},
+	{0x41,0x60,BIT,0},
+	{0x42,0x7f,BIT,0},
+	{0x44,0x22,BIT,0},//{0x44, 0x22,0},(yuv) {0x44, 0x26,0},(rgb565) // ytt
+	{0x45,0x00,BIT,0},
+	{0x46,0x02,BIT,0},
+	{0x4d,0x01,BIT,0},
+	{0x4f,0x01,BIT,0},
+	{0x50,0x01,BIT,0},
+	{0x70,0x70,BIT,0},
+
+//	{0x4c,0x00,BIT,0}, //{0x4c,0x1,BIT,0}, // ytt test mode
+//	{0x4d,0x18,BIT,0}, // test mod
+	/////////////////////////////////////////////////////
+	/////////////////////// BLK /////////////////////////
+	/////////////////////////////////////////////////////
+	{0x26,0xf7,BIT,0},
+	{0x27,0x01,BIT,0},
+	{0x28,0x7f,BIT,0},
+	{0x29,0x38,BIT,0},
+	{0x33,0x1a,BIT,0},
+	{0x34,0x1a,BIT,0},
+	{0x35,0x1a,BIT,0},
+	{0x36,0x1a,BIT,0},
+	{0x37,0x1a,BIT,0},
+	{0x38,0x1a,BIT,0},
+	{0x39,0x1a,BIT,0},
+	{0x3a,0x1a,BIT,0},
+	////////////////////////////////////////////////////
+	//////////////////// Y Gamma ///////////////////////
+	////////////////////////////////////////////////////
+	{0xfe,0x00,BIT,0},
+	{0x63,0x00,BIT,0},
+	{0x64,0x06,BIT,0},
+	{0x65,0x0f,BIT,0},
+	{0x66,0x21,BIT,0},
+	{0x67,0x34,BIT,0},
+	{0x68,0x47,BIT,0},
+	{0x69,0x59,BIT,0},
+	{0x6a,0x6c,BIT,0},
+	{0x6b,0x8e,BIT,0},
+	{0x6c,0xab,BIT,0},
+	{0x6d,0xc5,BIT,0},
+	{0x6e,0xe0,BIT,0},
+	{0x6f,0xfa,BIT,0},
+	////////////////////////////////////////////////////
+	////////////////// YUV to RGB //////////////////////
+	////////////////////////////////////////////////////
+	////////////////////////////////////////////////////
+	////////////////// YUV to RGB //////////////////////
+	////////////////////////////////////////////////////
+	{0xb0,0x13,BIT,0},
+	{0xb1,0x27,BIT,0},
+	{0xb2,0x07,BIT,0},
+	{0xb3,0xf5,BIT,0},
+	{0xb4,0xe9,BIT,0},
+	{0xb5,0x21,BIT,0},
+	{0xb6,0x21,BIT,0},
+	{0xb7,0xe3,BIT,0},
+	{0xb8,0xfb,BIT,0},
+	////////////////////////////////////////////////////
+	/////////////////////// DNDD ///////////////////////
+	////////////////////////////////////////////////////
+	{0x7e,0x14,BIT,0},
+	{0x7f,0xc1,BIT,0},
+	{0x82,0x78,BIT,0},
+	{0x84,0x02,BIT,0},
+	{0x89,0xe4,BIT,0},
+	////////////////////////////////////////////////////
+	////////////////////// INTPEE //////////////////////
+	////////////////////////////////////////////////////
+	{0x90,0xbc,BIT,0},
+	{0x92,0x08,BIT,0},
+	{0x94,0x08,BIT,0},
+	{0x95,0x86,BIT,0},
+	////////////////////////////////////////////////////
+	/////////////////////// ASDE ///////////////////////
+	////////////////////////////////////////////////////
+	{0xfe,0x01,BIT,0},
+	{0x18,0x01,BIT,0},
+	{0xfe,0x00,BIT,0},
+	{0x9a,0x20,BIT,0},
+	{0x9c,0x98,BIT,0},
+	{0x9e,0x08,BIT,0},
+	{0xa2,0x32,BIT,0},
+	{0xa4,0x40,BIT,0},
+	{0xaa,0x60,BIT,0},
+	////////////////////////////////////////////////////
+	//////////////////// RGB Gamma /////////////////////
+	////////////////////////////////////////////////////
+	{0xbf,0x0b,BIT,0},
+	{0xc0,0x16,BIT,0},
+	{0xc1,0x29,BIT,0},
+	{0xc2,0x3c,BIT,0},
+	{0xc3,0x4f,BIT,0},
+	{0xc4,0x5f,BIT,0},
+	{0xc5,0x6f,BIT,0},
+	{0xc6,0x8a,BIT,0},
+	{0xc7,0x9f,BIT,0},
+	{0xc8,0xb4,BIT,0},
+	{0xc9,0xc6,BIT,0},
+	{0xca,0xd3,BIT,0},
+	{0xcb,0xdd,BIT,0},
+	{0xcc,0xe5,BIT,0},
+	{0xcd,0xf1,BIT,0},
+	{0xce,0xfa,BIT,0},
+	{0xcf,0xff,BIT,0},
+	////////////////////////////////////////////////////
+	/////////////////////// AEC ////////////////////////
+	////////////////////////////////////////////////////
+	{0xfe,0x01,BIT,0},
+	{0x10,0x00,BIT,0},
+	{0x11,0x11,BIT,0},
+	{0x12,0x10,BIT,0},
+	{0x13,0x50,BIT,0},
+	{0x16,0x18,BIT,0},
+	{0x17,0x88,BIT,0},
+	{0x21,0xf0,BIT,0},
+	{0x22,0x80,BIT,0},
+	{0x29,0x00,BIT,0},
+	{0x2a,0x68,BIT,0}, //step
+	{0x2b,0x02,BIT,0}, //14fps
+	{0x2c,0xd8,BIT,0},
+	{0x2d,0x02,BIT,0}, //11fps
+	{0x2e,0xd8,BIT,0},
+	{0x2f,0x04,BIT,0}, //8fps
+	{0x30,0x10,BIT,0},
+	{0x31,0x05,BIT,0}, //4fps
+	{0x32,0xb0,BIT,0},
+	{0x33,0x20,BIT,0},
+	{0x3c,0x60,BIT,0},
+	{0x3e,0x40,BIT,0},
+	////////////////////////////////////////////////////
+	/////////////////////// YCP ////////////////////////
+	////////////////////////////////////////////////////
+	{0xfe,0x00,BIT,0},
+	{0xd1,0x30,BIT,0},
+	{0xd2,0x30,BIT,0},
+	{0xde,0x38,BIT,0},
+	{0xd8,0x15,BIT,0},
+	{0xdd,0x00,BIT,0},
+	{0xe4,0x8f,BIT,0},
+	{0xe5,0x50,BIT,0},
+	////////////////////////////////////////////////////
+	//////////////////// DARK & RC /////////////////////
+	////////////////////////////////////////////////////
+	{0xfe,0x01,BIT,0},
+	{0x40,0x8f,BIT,0},
+	{0x41,0x83,BIT,0},
+	{0x42,0xff,BIT,0},
+	{0x43,0x06,BIT,0},
+	{0x44,0x1f,BIT,0},
+	{0x45,0xff,BIT,0},
+	{0x46,0xff,BIT,0},
+	{0x47,0x04,BIT,0},
+	////////////////////////////////////////////////////
+	////////////////////// AWB /////////////////////////
+	////////////////////////////////////////////////////
+	////////////////////////////////////////////////////
+	////////////////////// AWB /////////////////////////
+	//////////////////////////////////////////////////// 
+	{0x06,0x0d,BIT,0},
+	{0x07,0x06,BIT,0},
+	{0x08,0xa4,BIT,0},
+	{0x09,0xf2,BIT,0},
+	{0x50,0xfd,BIT,0},
+	{0x51,0x20,BIT,0},
+	{0x52,0x20,BIT,0},
+	{0x53,0x08,BIT,0},
+	{0x54,0x10,BIT,0},
+	{0x55,0x20,BIT,0},
+	{0x56,0x1b,BIT,0},
+	{0x57,0x20,BIT,0},
+	{0x58,0xfd,BIT,0},
+	{0x59,0x08,BIT,0},
+	{0x5a,0x11,BIT,0},
+	{0x5b,0xf0,BIT,0},
+	{0x5c,0xe8,BIT,0},
+	{0x5d,0x10,BIT,0},
+	{0x5e,0x20,BIT,0},
+	{0x5f,0xe0,BIT,0},
+	{0x60,0x00,BIT,0},
+	{0x67,0x03,BIT,0},
+	{0x69,0xb0,BIT,0},
+	{0x6d,0x32,BIT,0},
+	{0x6e,0x08,BIT,0},
+	{0x6f,0x08,BIT,0},
+	{0x70,0x40,BIT,0},
+	{0x71,0x82,BIT,0},
+	{0x72,0x25,BIT,0},
+	{0x73,0x62,BIT,0},
+	{0x74,0x1b,BIT,0},
+	{0x75,0x48,BIT,0},
+	{0x76,0x40,BIT,0},
+	{0x77,0xc2,BIT,0},
+	{0x78,0xa5,BIT,0},
+	{0x79,0x18,BIT,0},
+	{0x7a,0x40,BIT,0},
+	{0x7b,0xb0,BIT,0},
+	{0x7c,0xf5,BIT,0},
+	{0x81,0x80,BIT,0},
+	{0x82,0x60,BIT,0},
+	{0x83,0xb0,BIT,0},
+	{0x84,0x80,BIT,0},
+	{0x85,0x58,BIT,0},
+	{0x86,0x4a,BIT,0},
+	{0x92,0x00,BIT,0},
+	{0xd5,0x0C,BIT,0},
+	{0xd6,0x02,BIT,0},
+	{0xd7,0x06,BIT,0},
+	{0xd8,0x05,BIT,0},
+	{0xdd,0x00,BIT,0},
+	////////////////////////////////////////////////////
+	////////////////////// LSC /////////////////////////
+	////////////////////////////////////////////////////
+	{0xfe,0x01,BIT,0},
+	{0xa0,0x00,BIT,0},
+	{0xa1,0x3c,BIT,0},
+	{0xa2,0x50,BIT,0},
+	{0xa3,0x00,BIT,0},
+	{0xa4,0x00,BIT,0},
+	{0xa5,0x00,BIT,0},
+	{0xa6,0x00,BIT,0},
+	{0xa7,0x00,BIT,0},
+	{0xa8,0x12,BIT,0},
+	{0xa9,0x0b,BIT,0},
+	{0xaa,0x0c,BIT,0},
+	{0xab,0x0c,BIT,0},
+	{0xac,0x04,BIT,0},
+	{0xad,0x00,BIT,0},
+	{0xae,0x0a,BIT,0},
+	{0xaf,0x04,BIT,0},
+	{0xb0,0x00,BIT,0},
+	{0xb1,0x06,BIT,0},
+	{0xb2,0x00,BIT,0},
+	{0xb3,0x00,BIT,0},
+	{0xb4,0x3c,BIT,0},
+	{0xb5,0x40,BIT,0},
+	{0xb6,0x3a,BIT,0},
+	{0xba,0x2d,BIT,0},
+	{0xbb,0x1e,BIT,0},
+	{0xbc,0x1c,BIT,0},
+	{0xc0,0x1a,BIT,0},
+	{0xc1,0x17,BIT,0},
+	{0xc2,0x18,BIT,0},
+	{0xc6,0x0b,BIT,0},
+	{0xc7,0x09,BIT,0},
+	{0xc8,0x09,BIT,0},
+	{0xb7,0x35,BIT,0},
+	{0xb8,0x20,BIT,0},
+	{0xb9,0x20,BIT,0},
+	{0xbd,0x20,BIT,0},
+	{0xbe,0x20,BIT,0},
+	{0xbf,0x20,BIT,0},
+	{0xc3,0x00,BIT,0},
+	{0xc4,0x00,BIT,0},
+	{0xc5,0x00,BIT,0},
+	{0xc9,0x00,BIT,0},
+	{0xca,0x00,BIT,0},
+	{0xcb,0x00,BIT,200},
+	//////////////////////////////////////////////////
+	////////////////////// MIPI //////////////////////
+	//////////////////////////////////////////////////
+	{0xfe,0x03,BIT,0},
+	{0x01,0x03,BIT,0},
+	{0x02,0x21,BIT,0},
+	{0x03,0x20,BIT,0}, //[5]lane0 delay [4]clk delay
+	{0x06,0x80,BIT,0}, //clock enable
+	{0x04,0x80,BIT,0}, //fifo_pro low 8bit
+	{0x05,0x00,BIT,0}, //{0x05 , 0x02,0}, // fifo hig 4 bit
+	{0x11,0x1e,BIT,0}, ////{0x11 , 0x1e,0}, //LDI 0x22 rgb 0x1e yuv
+	{0x12,0x00,BIT,0}, //LWC
+	{0x13,0x05,BIT,0},
+	{0x15,0x11,BIT,0}, //{0x15 , 0x12,0}, //10//Dphy mode
+	{0x17,0x00,BIT,0}, //Wdiv
+	{0x10,0x94,BIT,0}, //94
+	{0xfe,0x00,BIT,0}, // page 0
+};
+
+static struct sensor_reg_list gc0313_init = {
+	.size = ARRAY_ROW(init_gc0313),
+	.val = init_gc0313
+};
+
+static struct sensor_reg_list gc0313_vga = {
+	.size = ARRAY_ROW(vga_gc0313),
+	.val = vga_gc0313
+};
+static struct sensor_reg_list gc0313_qvga = {
+	.size = ARRAY_ROW(qvga_gc0313),
+	.val = qvga_gc0313
+};
+static struct sensor_reg_list gc0313_qcif = {
+	.size = ARRAY_ROW(qcif_gc0313),
+	.val = qcif_gc0313
+};
+static struct sensor_reg_list gc0313_qqvga = {
+	.size = ARRAY_ROW(qqvga_gc0313),
+	.val = qqvga_gc0313
+};
+static struct sensor_win_size gc0313_win_size[] = {
+	WIN_SIZE("VGA", W_VGA, H_VGA, &gc0313_vga),
+	WIN_SIZE("QVGA", W_QVGA, H_QVGA, &gc0313_qvga),
+	WIN_SIZE("QCIF", W_QCIF, H_QCIF, &gc0313_qcif),
+	WIN_SIZE("QQVGA", W_QQVGA, H_QQVGA, &gc0313_qqvga),
+};
+
+static struct sensor_win_cfg gc0313_win_cfg = {
+	.num = ARRAY_ROW(gc0313_win_size),
+	.win_size = gc0313_win_size
+};
+
+static struct sensor_csi_cfg gc0313_csi_cfg = {
+	.csi_en = true,
+	.d_term_en = 4,
+	.c_term_en = 4,
+	.dhs_settle = 5,
+	.chs_settle = 5,
+};
+
+static struct sensor_info gc0313_info = {
+	.name		= "gc0313_csi",
+	.chip_id	= 0xd0,
+	.mclk		= 26,
+	.i2c_addr	= 0x21,
+	.exp_def	= 0,
+	.awb_def	= 1,
+	.rst_act_h	= false,
+	.pdn_act_h	= true,
+	.init		= &gc0313_init,
+	.win_cfg	= &gc0313_win_cfg,
+	.csi_cfg	= &gc0313_csi_cfg
+};
+
+extern void sensor_power_down(bool high, bool acth, int id);
+extern void sensor_reset(bool rst, bool acth);
+extern void sensor_clock(bool out, int mclk);
+extern void sensor_read(const u16 addr, u8 *data, u8 bits);
+extern void sensor_write(const u16 addr, const u8 data, u8 bits);
+extern void sensor_write_group(struct sensor_reg* reg, u32 size);
+
+static u32 gc0313_power(int id, int mclk, bool rst_h, bool pdn_h)
+{
+	/* set state to power off */
+	sensor_power_down(true, pdn_h, 0);
+	mdelay(1);
+	sensor_power_down(true, pdn_h, 1);
+	mdelay(1);
+	sensor_reset(true, rst_h);
+	mdelay(1);
+
+	/* power on sequence */
+	sensor_clock(true, mclk);
+	mdelay(1);
+	sensor_power_down(false, pdn_h, id);
+	mdelay(1);
+	sensor_reset(false, rst_h);
+	mdelay(10);
+
+	return 0;
+}
+
+static u32 gc0313_get_chipid(void)
+{
+	u8 chip_id = 0;
+
+	sensor_read(0xf0, &chip_id, BIT);
+
+	return chip_id;
+}
+
+static u32 gc0313_get_lum(void)
+{
+	u8 val = 0;
+	u32 ret = 0;
+
+	sensor_write(0xfe, 0x01, BIT);
+	sensor_read(0x14, &val, BIT);
+	sensor_write(0xfe, 0x00, BIT);
+
+	if (val < 0x30)
+		ret = 1;
+
+	return ret;
+}
+
+#define GC0313_FLIP_BASE	0x17
+#define GC0313_H_FLIP_BIT	0
+#define GC0313_V_FLIP_BIT	1
+static void gc0313_set_flip(int hv, int flip)
+{
+	u8 tmp = 0;
+
+	sensor_read(GC0313_FLIP_BASE, &tmp, BIT);
+
+	if (hv) {
+		if (flip)
+			tmp |= (0x1 << GC0313_V_FLIP_BIT);
+		else
+			tmp &= ~(0x1 << GC0313_V_FLIP_BIT);
+	}
+	else {
+		if (flip)
+			tmp |= (0x1 << GC0313_H_FLIP_BIT);
+		else
+			tmp &= ~(0x1 << GC0313_H_FLIP_BIT);
+	}
+
+	sensor_write(GC0313_FLIP_BASE, tmp, BIT);
+}
+
+#define GC0313_EXP_ROW		ARRAY_ROW(exp_gc0313)
+#define GC0313_EXP_COL		ARRAY_COL(exp_gc0313)
+static void gc0313_set_exp(int exp)
+{
+	int key = exp + (GC0313_EXP_ROW / 2);
+	if ((key < 0) || (key > (GC0313_EXP_ROW - 1)))
+		return;
+
+	sensor_write_group(exp_gc0313[key], GC0313_EXP_COL);
+}
+
+#define GC0313_AWB_ROW		ARRAY_ROW(awb_gc0313)
+#define GC0313_AWB_COL		ARRAY_COL(awb_gc0313)
+static void gc0313_set_awb(int awb)
+{
+	if ((awb < 0) || (awb > (GC0313_AWB_ROW - 1)))
+		return;
+
+	sensor_write_group(awb_gc0313[awb], GC0313_AWB_COL);
+}
+
+static struct sensor_ops gc0313_ops = {
+	.power		= gc0313_power,
+	.get_chipid	= gc0313_get_chipid,
+	.get_lum	= gc0313_get_lum,
+	.set_flip	= gc0313_set_flip,
+	.set_exp	= gc0313_set_exp,
+	.set_awb	= gc0313_set_awb,
+	.start		= NULL,
+	.stop		= NULL
+};
+
+struct sensor_dev gc0313_dev = {
+	.info	= &gc0313_info,
+	.ops	= &gc0313_ops,
+};
+
+#undef BIT
+#endif

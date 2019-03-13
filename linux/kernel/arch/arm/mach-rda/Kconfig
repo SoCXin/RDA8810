@@ -1,0 +1,131 @@
+if ARCH_RDA
+
+menu "RDA SoCs Support"
+
+config ARCH_RDA8810
+	bool "RDA8810 SoC"
+	select CACHE_L2X0
+	help
+	  RDA8810 SoC based systems
+
+config MACH_RDA8810
+	bool "RDA8810 based mach"
+	select ARCH_RDA8810
+	select CLKDEV_LOOKUP
+	select COMMON_CLK
+	select CLK_RDA
+#	select COMMON_CLK_DEBUG
+	help
+	  RDA8810 based Board
+
+config ARCH_RDA8810E
+	bool "RDA8810E SoC"
+	select ARM_GIC
+	select HAVE_ARM_SCU if SMP
+	select HAVE_SMP
+#	select HAVE_ARM_ARCH_TIMER
+#	select ARCH_NEEDS_CPU_IDLE_COUPLED if SMP
+	select CPU_IDLE_MULTIPLE_DRIVERS if CPU_IDLE
+	help
+	  RDA8810E SoC based systems
+
+config MACH_RDA8810E
+	bool "RDA8810E based mach"
+	select ARCH_RDA8810E
+	select CLKDEV_LOOKUP
+	select COMMON_CLK
+	select CLK_RDA
+#	select COMMON_CLK_DEBUG
+	help
+	  RDA8810E based Board
+
+config ARCH_RDA8850E
+	bool "RDA8850E SoC"
+	select ARM_GIC
+	select HAVE_ARM_SCU if SMP
+	select HAVE_SMP
+	select RDA_SLEEP_OFF_MODE
+	select RDA_ISPI
+	select ARM_HAS_SG_CHAIN
+	select RDA_AP_PLL_FREQ_ADJUST
+	help
+	  RDA8850E SoC based systems
+
+config MACH_RDA8850E
+	bool "RDA8850E based mach"
+	select ARCH_RDA8850E
+	select CLKDEV_LOOKUP
+	select COMMON_CLK
+	select CLK_RDA
+#	select COMMON_CLK_DEBUG
+	help
+	  RDA8850E based Board
+
+config ARCH_RDA8820
+	bool "RDA8820 SoC"
+	select ARM_GIC
+	select HAVE_ARM_SCU if SMP
+	select HAVE_SMP
+	help
+	  RDA8820 SoC based systems
+
+config MACH_RDA8820
+	bool "RDA8820 based mach"
+	select ARCH_RDA8820
+	select CLKDEV_LOOKUP
+	select COMMON_CLK
+	select CLK_RDA
+#	select COMMON_CLK_DEBUG
+	help
+	  RDA8820 based Board
+
+config ARCH_RDA8810H
+	bool "RDA8810H SoC"
+	select ARM_GIC
+	select HAVE_ARM_SCU if SMP
+	select HAVE_SMP
+#	select HAVE_ARM_ARCH_TIMER
+#	select ARCH_NEEDS_CPU_IDLE_COUPLED if SMP
+	select CPU_IDLE_MULTIPLE_DRIVERS if CPU_IDLE
+	help
+	  RDA8810H SoC based systems
+
+config MACH_RDA8810H
+	bool "RDA8810H based mach"
+	select ARCH_RDA8810H
+	select CLKDEV_LOOKUP
+	select COMMON_CLK
+	select CLK_RDA
+#	select COMMON_CLK_DEBUG
+	help
+	  RDA8810H based Board
+
+config CLK_RDA
+	bool
+	depends on ARCH_RDA
+	help
+	  RDA clock tree
+
+config RDA_CLK_SIMU
+	bool "Simulate setting h/w clock"
+	depends on CLK_RDA
+	help
+	  Select to skip the real h/w clock settings
+
+config RDA_FPGA
+	bool "Buid for FPGA Board"
+	depends on ARCH_RDA
+	help
+	  Select when compile for FPGA, skip all mdcom and regulator
+	  operations
+
+config RDA_SLEEP_OFF_MODE
+	bool "Support shutdown CPU when sleep"
+	depends on ARCH_RDA && PM
+	default n
+	help
+	  Select if we want to shutdown/reset CPU when sleep
+
+endmenu
+
+endif
