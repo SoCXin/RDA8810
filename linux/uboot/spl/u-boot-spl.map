@@ -1,0 +1,2274 @@
+Archive member included because of file (symbol)
+
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+                              arch/arm/cpu/armv7/rda/librda.o (__aeabi_uidiv)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divsi3.o)
+                              drivers/mtd/nand/libnand.o (__aeabi_idiv)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_lshrdi3.o)
+                              drivers/mmc/libmmc.o (__aeabi_llsr)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashrdi3.o)
+                              drivers/mtd/nand/libnand.o (__aeabi_lasr)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+                              drivers/mmc/libmmc.o (__aeabi_llsl)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+                              arch/arm/cpu/armv7/rda/librda.o (__aeabi_uldivmod)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+                              /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+                              /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o) (__gnu_uldivmod_helper)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+                              /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o) (__divdi3)
+/xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+                              /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o) (__udivdi3)
+
+Discarded input sections
+
+ .data          0x00000000        0x0 arch/arm/cpu/armv7/start.o
+ .bss           0x00000000        0x0 arch/arm/cpu/armv7/start.o
+ .text          0x00000000        0x0 arch/arm/cpu/armv7/libarmv7.o
+ .text.v7_maint_dcache_all
+                0x00000000       0xbe arch/arm/cpu/armv7/libarmv7.o
+ .text.invalidate_dcache_all
+                0x00000000       0x10 arch/arm/cpu/armv7/libarmv7.o
+ .text.flush_dcache_all
+                0x00000000       0x10 arch/arm/cpu/armv7/libarmv7.o
+ .text.arm_init_before_mmu
+                0x00000000       0x22 arch/arm/cpu/armv7/libarmv7.o
+ .text.invalidate_icache_all
+                0x00000000       0x14 arch/arm/cpu/armv7/libarmv7.o
+ .text.__v7_outer_cache_enable
+                0x00000000        0x2 arch/arm/cpu/armv7/libarmv7.o
+ .text.__v7_outer_cache_disable
+                0x00000000        0x2 arch/arm/cpu/armv7/libarmv7.o
+ .text.__v7_outer_cache_flush_all
+                0x00000000        0x2 arch/arm/cpu/armv7/libarmv7.o
+ .text.__v7_outer_cache_inval_all
+                0x00000000        0x2 arch/arm/cpu/armv7/libarmv7.o
+ .text.cleanup_before_linux
+                0x00000000       0x1a arch/arm/cpu/armv7/libarmv7.o
+ .text.sdelay   0x00000000        0x6 arch/arm/cpu/armv7/libarmv7.o
+ .text.sr32     0x00000000       0x1c arch/arm/cpu/armv7/libarmv7.o
+ .text.wait_on_value
+                0x00000000       0x1a arch/arm/cpu/armv7/libarmv7.o
+ .data          0x00000000        0x0 arch/arm/cpu/armv7/libarmv7.o
+ .bss           0x00000000        0x0 arch/arm/cpu/armv7/libarmv7.o
+ .text          0x00000000        0x0 arch/arm/cpu/armv7/rda/librda.o
+ .text.timer_init
+                0x00000000       0x18 arch/arm/cpu/armv7/rda/librda.o
+ .text.reset_timer
+                0x00000000        0xe arch/arm/cpu/armv7/rda/librda.o
+ .text.usec2ticks
+                0x00000000        0x4 arch/arm/cpu/armv7/rda/librda.o
+ .text.ticks2usec
+                0x00000000        0x4 arch/arm/cpu/armv7/rda/librda.o
+ .text.get_tbclk
+                0x00000000        0x8 arch/arm/cpu/armv7/rda/librda.o
+ .text._serial_set_baudrate
+                0x00000000       0x10 arch/arm/cpu/armv7/rda/librda.o
+ .text._serial_disable_rtscts
+                0x00000000       0x10 arch/arm/cpu/armv7/rda/librda.o
+ .text._serial_init
+                0x00000000       0x20 arch/arm/cpu/armv7/rda/librda.o
+ .text._serial_deinit
+                0x00000000       0x10 arch/arm/cpu/armv7/rda/librda.o
+ .text._serial_tstc
+                0x00000000       0x10 arch/arm/cpu/armv7/rda/librda.o
+ .text.hwflow_onoff
+                0x00000000       0x24 arch/arm/cpu/armv7/rda/librda.o
+ .text.serial_setbrg
+                0x00000000        0x2 arch/arm/cpu/armv7/rda/librda.o
+ .text.hal_IfcOpen
+                0x00000000       0x18 arch/arm/cpu/armv7/rda/librda.o
+ .text.hal_IfcGetOwner
+                0x00000000       0x14 arch/arm/cpu/armv7/rda/librda.o
+ .text.enable_neon
+                0x00000000       0x50 arch/arm/cpu/armv7/rda/librda.o
+ .text.enable_caches
+                0x00000000       0x30 arch/arm/cpu/armv7/rda/librda.o
+ .text.print_cpuinfo
+                0x00000000       0x10 arch/arm/cpu/armv7/rda/librda.o
+ .text.rda_prod_id_get
+                0x00000000        0xc arch/arm/cpu/armv7/rda/librda.o
+ .text.rda_bond_id_get
+                0x00000000       0x10 arch/arm/cpu/armv7/rda/librda.o
+ .text.shutdown_system
+                0x00000000       0x14 arch/arm/cpu/armv7/rda/librda.o
+ .text.enable_vibrator
+                0x00000000       0x40 arch/arm/cpu/armv7/rda/librda.o
+ .text.enable_charger
+                0x00000000       0x30 arch/arm/cpu/armv7/rda/librda.o
+ .text.print_cur_time
+                0x00000000       0x3c arch/arm/cpu/armv7/rda/librda.o
+ .bss           0x00000000        0x0 arch/arm/cpu/armv7/rda/librda.o
+ .bss.hwflow    0x00000000        0x4 arch/arm/cpu/armv7/rda/librda.o
+ .text          0x00000000        0x0 arch/arm/lib/libarm.o
+ .text.__flush_cache
+                0x00000000        0x2 arch/arm/lib/libarm.o
+ .text.__flush_dcache_all
+                0x00000000        0xa arch/arm/lib/libarm.o
+ .text.__enable_caches
+                0x00000000        0xc arch/arm/lib/libarm.o
+ .text.cp_delay
+                0x00000000       0x18 arch/arm/lib/libarm.o
+ .text.cache_enable
+                0x00000000       0x8a arch/arm/lib/libarm.o
+ .text.cache_disable
+                0x00000000       0x28 arch/arm/lib/libarm.o
+ .text.__arm_init_before_mmu
+                0x00000000        0x2 arch/arm/lib/libarm.o
+ .text.icache_enable
+                0x00000000        0x8 arch/arm/lib/libarm.o
+ .text.icache_disable
+                0x00000000        0x8 arch/arm/lib/libarm.o
+ .text.icache_status
+                0x00000000        0xa arch/arm/lib/libarm.o
+ .text.dcache_enable
+                0x00000000        0x6 arch/arm/lib/libarm.o
+ .text.dcache_disable
+                0x00000000        0x6 arch/arm/lib/libarm.o
+ .text.dcache_status
+                0x00000000        0xa arch/arm/lib/libarm.o
+ .rodata.str1.1
+                0x00000000       0x1d arch/arm/lib/libarm.o
+ .data          0x00000000        0x0 arch/arm/lib/libarm.o
+ .bss           0x00000000        0x0 arch/arm/lib/libarm.o
+ .comment       0x00000000       0xca arch/arm/lib/libarm.o
+ .note.GNU-stack
+                0x00000000        0x0 arch/arm/lib/libarm.o
+ .ARM.attributes
+                0x00000000       0x2f arch/arm/lib/libarm.o
+ .debug_aranges
+                0x00000000       0x98 arch/arm/lib/libarm.o
+ .debug_info    0x00000000      0x7fb arch/arm/lib/libarm.o
+ .debug_abbrev  0x00000000      0x2a1 arch/arm/lib/libarm.o
+ .debug_line    0x00000000      0x30c arch/arm/lib/libarm.o
+ .debug_frame   0x00000000      0x110 arch/arm/lib/libarm.o
+ .debug_str     0x00000000      0x50f arch/arm/lib/libarm.o
+ .debug_loc     0x00000000      0x244 arch/arm/lib/libarm.o
+ .debug_ranges  0x00000000       0x78 arch/arm/lib/libarm.o
+ .text          0x00000000        0x0 board/rda/common/librda.o
+ .text.dram_init
+                0x00000000        0xc board/rda/common/librda.o
+ .text.dram_init_banksize
+                0x00000000       0x12 board/rda/common/librda.o
+ .text.checkboard
+                0x00000000       0x10 board/rda/common/librda.o
+ .text.get_board_rev
+                0x00000000        0x4 board/rda/common/librda.o
+ .text.board_init
+                0x00000000       0x18 board/rda/common/librda.o
+ .rodata.str1.1
+                0x00000000       0x10 board/rda/common/librda.o
+ .data          0x00000000        0x0 board/rda/common/librda.o
+ .bss           0x00000000        0x0 board/rda/common/librda.o
+ .comment       0x00000000       0xca board/rda/common/librda.o
+ .note.GNU-stack
+                0x00000000        0x0 board/rda/common/librda.o
+ .ARM.attributes
+                0x00000000       0x2f board/rda/common/librda.o
+ .debug_aranges
+                0x00000000       0x58 board/rda/common/librda.o
+ .debug_info    0x00000000      0x67f board/rda/common/librda.o
+ .debug_abbrev  0x00000000      0x245 board/rda/common/librda.o
+ .debug_line    0x00000000      0x288 board/rda/common/librda.o
+ .debug_frame   0x00000000       0x78 board/rda/common/librda.o
+ .debug_str     0x00000000      0x560 board/rda/common/librda.o
+ .debug_loc     0x00000000       0x20 board/rda/common/librda.o
+ .debug_ranges  0x00000000       0x38 board/rda/common/librda.o
+ .text          0x00000000        0x0 board/rda/rda8810/librda8810.o
+ .rodata.g_reg_cache
+                0x00000000        0x4 board/rda/rda8810/librda8810.o
+ .data          0x00000000        0x0 board/rda/rda8810/librda8810.o
+ .bss           0x00000000        0x0 board/rda/rda8810/librda8810.o
+ .text          0x00000000        0x0 common/libcommon.o
+ .text.console_setfile
+                0x00000000       0x60 common/libcommon.o
+ .text.serial_printf
+                0x00000000       0x30 common/libcommon.o
+ .text.fprintf  0x00000000       0x34 common/libcommon.o
+ .text.vprintf  0x00000000       0x2a common/libcommon.o
+ .text.ctrlc    0x00000000       0x34 common/libcommon.o
+ .text.disable_ctrlc
+                0x00000000       0x10 common/libcommon.o
+ .text.had_ctrlc
+                0x00000000        0xc common/libcommon.o
+ .text.clear_ctrlc
+                0x00000000        0xc common/libcommon.o
+ .text.dbg      0x00000000        0x6 common/libcommon.o
+ .text.search_device
+                0x00000000       0x16 common/libcommon.o
+ .text.console_assign
+                0x00000000       0x2c common/libcommon.o
+ .text.console_init_f
+                0x00000000        0xa common/libcommon.o
+ .text.stdio_print_current_devices
+                0x00000000       0x7c common/libcommon.o
+ .text.console_init_r
+                0x00000000       0x80 common/libcommon.o
+ .text.sbrk     0x00000000       0x4c common/libcommon.o
+ .text.mem_malloc_init
+                0x00000000       0x28 common/libcommon.o
+ .text.malloc_trim
+                0x00000000       0x88 common/libcommon.o
+ .text.free     0x00000000      0x164 common/libcommon.o
+ .text.cfree    0x00000000        0x4 common/libcommon.o
+ .text.malloc   0x00000000      0x3e0 common/libcommon.o
+ .text.calloc   0x00000000       0x88 common/libcommon.o
+ .text.memalign
+                0x00000000       0xcc common/libcommon.o
+ .text.pvalloc  0x00000000       0x14 common/libcommon.o
+ .text.valloc   0x00000000        0xa common/libcommon.o
+ .text.realloc  0x00000000      0x2b0 common/libcommon.o
+ .text.malloc_usable_size
+                0x00000000       0x2a common/libcommon.o
+ .text.mallopt  0x00000000       0x3c common/libcommon.o
+ .text.image_check_magic
+                0x00000000       0x18 common/libcommon.o
+ .text.image_multi_count
+                0x00000000       0x12 common/libcommon.o
+ .text.image_multi_getimg
+                0x00000000       0x5c common/libcommon.o
+ .text.getenv_yesno
+                0x00000000       0x16 common/libcommon.o
+ .text.getenv_bootm_low
+                0x00000000       0x20 common/libcommon.o
+ .text.getenv_bootm_size
+                0x00000000       0x3c common/libcommon.o
+ .text.getenv_bootm_mapsize
+                0x00000000       0x20 common/libcommon.o
+ .text.memmove_wd
+                0x00000000        0xa common/libcommon.o
+ .text.genimg_print_size
+                0x00000000       0x24 common/libcommon.o
+ .text.get_table_entry_name
+                0x00000000       0x18 common/libcommon.o
+ .text.genimg_get_os_name
+                0x00000000       0x14 common/libcommon.o
+ .text.genimg_get_arch_name
+                0x00000000       0x14 common/libcommon.o
+ .text.genimg_get_type_name
+                0x00000000       0x14 common/libcommon.o
+ .text.genimg_get_comp_name
+                0x00000000       0x14 common/libcommon.o
+ .text.image_print_contents
+                0x00000000       0xf8 common/libcommon.o
+ .text.get_table_entry_id
+                0x00000000       0x26 common/libcommon.o
+ .text.genimg_get_os_id
+                0x00000000       0x14 common/libcommon.o
+ .text.genimg_get_arch_id
+                0x00000000       0x14 common/libcommon.o
+ .text.genimg_get_type_id
+                0x00000000       0x14 common/libcommon.o
+ .text.genimg_get_comp_id
+                0x00000000       0x14 common/libcommon.o
+ .text.genimg_get_format
+                0x00000000        0xe common/libcommon.o
+ .text.genimg_get_image
+                0x00000000        0x2 common/libcommon.o
+ .text.genimg_has_config
+                0x00000000        0x4 common/libcommon.o
+ .text.boot_get_ramdisk
+                0x00000000      0x17c common/libcommon.o
+ .text.boot_ramdisk_high
+                0x00000000       0xc4 common/libcommon.o
+ .text.get_ram_size
+                0x00000000       0xa2 common/libcommon.o
+ .text.stdio_get_list
+                0x00000000        0x8 common/libcommon.o
+ .text.stdio_get_by_name
+                0x00000000       0x34 common/libcommon.o
+ .text.stdio_clone
+                0x00000000       0x30 common/libcommon.o
+ .text.stdio_register
+                0x00000000       0x28 common/libcommon.o
+ .text.stdio_init
+                0x00000000       0x5c common/libcommon.o
+ .text.CYGACC_COMM_IF_PUTC
+                0x00000000        0x6 common/libcommon.o
+ .rodata.uimage_comp
+                0x00000000       0x48 common/libcommon.o
+ .rodata.uimage_os
+                0x00000000       0x30 common/libcommon.o
+ .rodata.uimage_arch
+                0x00000000       0x48 common/libcommon.o
+ .rodata.uimage_type
+                0x00000000       0xc0 common/libcommon.o
+ .data          0x00000000        0x0 common/libcommon.o
+ .data.av_      0x00000000      0x408 common/libcommon.o
+ .data.mmap_threshold
+                0x00000000        0x4 common/libcommon.o
+ .data.sbrk_base
+                0x00000000        0x4 common/libcommon.o
+ .data.trim_threshold
+                0x00000000        0x4 common/libcommon.o
+ .data.stdio_names
+                0x00000000        0xc common/libcommon.o
+ .bss           0x00000000        0x0 common/libcommon.o
+ .bss.ctrlc_was_pressed
+                0x00000000        0x4 common/libcommon.o
+ .bss.ctrlc_disabled
+                0x00000000        0x4 common/libcommon.o
+ .bss.max_total_mem
+                0x00000000        0x4 common/libcommon.o
+ .bss.mem_malloc_brk
+                0x00000000        0x4 common/libcommon.o
+ .bss.max_sbrked_mem
+                0x00000000        0x4 common/libcommon.o
+ .bss.current_mallinfo
+                0x00000000       0x28 common/libcommon.o
+ .bss.mem_malloc_end
+                0x00000000        0x4 common/libcommon.o
+ .bss.top_pad   0x00000000        0x4 common/libcommon.o
+ .bss.mem_malloc_start
+                0x00000000        0x4 common/libcommon.o
+ .bss.n_mmaps_max
+                0x00000000        0x4 common/libcommon.o
+ .bss.devs      0x00000000       0x3c common/libcommon.o
+ .text          0x00000000        0x0 drivers/mmc/libmmc.o
+ .text.board_mmc_getwp
+                0x00000000        0x6 drivers/mmc/libmmc.o
+ .text.mmc_getwp
+                0x00000000       0x1c drivers/mmc/libmmc.o
+ .text.mmc_send_cmd
+                0x00000000        0xa drivers/mmc/libmmc.o
+ .text.mmc_switch_part
+                0x00000000       0x34 drivers/mmc/libmmc.o
+ .text.mmc_get_dev
+                0x00000000       0x1c drivers/mmc/libmmc.o
+ .text.print_mmc_devices
+                0x00000000       0x48 drivers/mmc/libmmc.o
+ .text.get_mmc_num
+                0x00000000        0xc drivers/mmc/libmmc.o
+ .text.mmc_set_preinit
+                0x00000000        0x6 drivers/mmc/libmmc.o
+ .text.hal_getticks
+                0x00000000        0x4 drivers/mmc/libmmc.o
+ .text.hal_get_op_status
+                0x00000000        0xa drivers/mmc/libmmc.o
+ .text.mmc_read
+                0x00000000       0x48 drivers/mmc/libmmc.o
+ .text.mmc_write
+                0x00000000       0x48 drivers/mmc/libmmc.o
+ .data          0x00000000        0x0 drivers/mmc/libmmc.o
+ .bss           0x00000000        0x0 drivers/mmc/libmmc.o
+ .text          0x00000000        0x0 drivers/mtd/nand/libnand.o
+ .text.nand_spl_mtd_info
+                0x00000000       0x10 drivers/mtd/nand/libnand.o
+ .text.nand_deselect
+                0x00000000       0x1c drivers/mtd/nand/libnand.o
+ .text.nand_calculate_ecc
+                0x00000000       0xbc drivers/mtd/nand/libnand.o
+ .text.nand_correct_data
+                0x00000000       0xc0 drivers/mtd/nand/libnand.o
+ .text.is_power_of_2
+                0x00000000        0xe drivers/mtd/nand/libnand.o
+ .text.nand_release_device
+                0x00000000       0x10 drivers/mtd/nand/libnand.o
+ .text.nand_read_byte
+                0x00000000        0xa drivers/mtd/nand/libnand.o
+ .text.nand_read_byte16
+                0x00000000        0xe drivers/mtd/nand/libnand.o
+ .text.nand_read_word
+                0x00000000        0xc drivers/mtd/nand/libnand.o
+ .text.nand_write_buf
+                0x00000000       0x18 drivers/mtd/nand/libnand.o
+ .text.nand_read_buf
+                0x00000000       0x18 drivers/mtd/nand/libnand.o
+ .text.nand_verify_buf
+                0x00000000       0x24 drivers/mtd/nand/libnand.o
+ .text.nand_write_buf16
+                0x00000000       0x1c drivers/mtd/nand/libnand.o
+ .text.nand_read_buf16
+                0x00000000       0x1e drivers/mtd/nand/libnand.o
+ .text.nand_verify_buf16
+                0x00000000       0x2a drivers/mtd/nand/libnand.o
+ .text.nand_check_wp
+                0x00000000       0x2c drivers/mtd/nand/libnand.o
+ .text.nand_read_page_raw
+                0x00000000       0x1e drivers/mtd/nand/libnand.o
+ .text.nand_read_page_raw_syndrome
+                0x00000000       0x80 drivers/mtd/nand/libnand.o
+ .text.nand_read_page_swecc
+                0x00000000       0xc0 drivers/mtd/nand/libnand.o
+ .text.nand_read_subpage
+                0x00000000      0x1b4 drivers/mtd/nand/libnand.o
+ .text.nand_read_page_hwecc
+                0x00000000       0xda drivers/mtd/nand/libnand.o
+ .text.nand_read_page_hwecc_oob_first
+                0x00000000       0xde drivers/mtd/nand/libnand.o
+ .text.nand_read_page_syndrome
+                0x00000000       0xc0 drivers/mtd/nand/libnand.o
+ .text.nand_read_oob_std
+                0x00000000       0x24 drivers/mtd/nand/libnand.o
+ .text.nand_read_oob_syndrome
+                0x00000000       0x9a drivers/mtd/nand/libnand.o
+ .text.nand_write_oob_std
+                0x00000000       0x48 drivers/mtd/nand/libnand.o
+ .text.nand_write_oob_syndrome
+                0x00000000       0xfc drivers/mtd/nand/libnand.o
+ .text.nand_write_page_raw
+                0x00000000       0x1c drivers/mtd/nand/libnand.o
+ .text.nand_write_page_raw_syndrome
+                0x00000000       0x7e drivers/mtd/nand/libnand.o
+ .text.nand_write_page_swecc
+                0x00000000       0x72 drivers/mtd/nand/libnand.o
+ .text.nand_write_page_hwecc
+                0x00000000       0x82 drivers/mtd/nand/libnand.o
+ .text.nand_write_page_syndrome
+                0x00000000       0x90 drivers/mtd/nand/libnand.o
+ .text.single_erase_cmd
+                0x00000000       0x24 drivers/mtd/nand/libnand.o
+ .text.multi_erase_cmd
+                0x00000000       0x50 drivers/mtd/nand/libnand.o
+ .text.nand_sync
+                0x00000000        0xe drivers/mtd/nand/libnand.o
+ .text.nand_block_checkbad
+                0x00000000       0x54 drivers/mtd/nand/libnand.o
+ .text.nand_block_isbad
+                0x00000000       0x24 drivers/mtd/nand/libnand.o
+ .text.nand_block_markbad
+                0x00000000       0x24 drivers/mtd/nand/libnand.o
+ .text.nand_write_page
+                0x00000000       0x68 drivers/mtd/nand/libnand.o
+ .text.mtd_div_by_cs
+                0x00000000       0x4a drivers/mtd/nand/libnand.o
+ .text.mtd_div_by_ws
+                0x00000000       0x24 drivers/mtd/nand/libnand.o
+ .text.nand_block_bad
+                0x00000000       0xf4 drivers/mtd/nand/libnand.o
+ .text.nand_wait
+                0x00000000       0x7c drivers/mtd/nand/libnand.o
+ .text.generic_ffs.part.0
+                0x00000000       0x30 drivers/mtd/nand/libnand.o
+ .text.nand_select_chip
+                0x00000000       0x3c drivers/mtd/nand/libnand.o
+ .text.nand_fill_oob
+                0x00000000       0xac drivers/mtd/nand/libnand.o
+ .text.nand_do_write_oob
+                0x00000000      0x18a drivers/mtd/nand/libnand.o
+ .text.nand_default_block_markbad
+                0x00000000      0x128 drivers/mtd/nand/libnand.o
+ .text.nand_do_write_ops
+                0x00000000      0x2a4 drivers/mtd/nand/libnand.o
+ .text.nand_write_oob
+                0x00000000       0x70 drivers/mtd/nand/libnand.o
+ .text.nand_write
+                0x00000000       0x60 drivers/mtd/nand/libnand.o
+ .text.nand_transfer_oob
+                0x00000000       0xac drivers/mtd/nand/libnand.o
+ .text.nand_do_read_ops
+                0x00000000      0x2b0 drivers/mtd/nand/libnand.o
+ .text.nand_read_oob
+                0x00000000      0x260 drivers/mtd/nand/libnand.o
+ .text.nand_read
+                0x00000000       0x60 drivers/mtd/nand/libnand.o
+ .text.nand_command
+                0x00000000      0x124 drivers/mtd/nand/libnand.o
+ .text.nand_command_lp
+                0x00000000      0x16c drivers/mtd/nand/libnand.o
+ .text.nand_erase_nand
+                0x00000000      0x384 drivers/mtd/nand/libnand.o
+ .text.nand_erase
+                0x00000000        0x6 drivers/mtd/nand/libnand.o
+ .text.nand_scan_ident
+                0x00000000      0x5ac drivers/mtd/nand/libnand.o
+ .text.nand_scan_tail
+                0x00000000      0x3f0 drivers/mtd/nand/libnand.o
+ .text.nand_scan
+                0x00000000       0x18 drivers/mtd/nand/libnand.o
+ .text.nand_release
+                0x00000000       0x32 drivers/mtd/nand/libnand.o
+ .text.disable_spi_nand_flash_ecc_mode
+                0x00000000       0x14 drivers/mtd/nand/libnand.o
+ .text.rda_flash_intf_is_spi
+                0x00000000        0xc drivers/mtd/nand/libnand.o
+ .rodata.nand_ecc_precalc_table
+                0x00000000      0x100 drivers/mtd/nand/libnand.o
+ .rodata.__FUNCTION__.3802
+                0x00000000       0x11 drivers/mtd/nand/libnand.o
+ .rodata.__FUNCTION__.4147
+                0x00000000       0x12 drivers/mtd/nand/libnand.o
+ .rodata.__FUNCTION__.4387
+                0x00000000        0xe drivers/mtd/nand/libnand.o
+ .rodata.__func__.4480
+                0x00000000       0x10 drivers/mtd/nand/libnand.o
+ .rodata.__func__.4528
+                0x00000000       0x14 drivers/mtd/nand/libnand.o
+ .rodata.__FUNCTION__.4571
+                0x00000000        0xf drivers/mtd/nand/libnand.o
+ .data          0x00000000        0x0 drivers/mtd/nand/libnand.o
+ .data.nand_oob_8
+                0x00000000      0x248 drivers/mtd/nand/libnand.o
+ .data.nand_oob_16
+                0x00000000      0x248 drivers/mtd/nand/libnand.o
+ .data.nand_oob_128
+                0x00000000      0x248 drivers/mtd/nand/libnand.o
+ .data.nand_oob_64
+                0x00000000      0x248 drivers/mtd/nand/libnand.o
+ .bss           0x00000000        0x0 drivers/mtd/nand/libnand.o
+ .text          0x00000000        0x0 lib/libgeneric.o
+ .text.strcpy   0x00000000       0x10 lib/libgeneric.o
+ .text.strncpy  0x00000000       0x14 lib/libgeneric.o
+ .text.strcat   0x00000000       0x1c lib/libgeneric.o
+ .text.strncat  0x00000000       0x2c lib/libgeneric.o
+ .text.strcmp   0x00000000       0x16 lib/libgeneric.o
+ .text.strncmp  0x00000000       0x1e lib/libgeneric.o
+ .text.strchr   0x00000000       0x18 lib/libgeneric.o
+ .text.skip_spaces
+                0x00000000       0x18 lib/libgeneric.o
+ .text.strlen   0x00000000       0x10 lib/libgeneric.o
+ .text.strim    0x00000000       0x30 lib/libgeneric.o
+ .text.strrchr  0x00000000       0x20 lib/libgeneric.o
+ .text.strdup   0x00000000       0x22 lib/libgeneric.o
+ .text.strspn   0x00000000       0x24 lib/libgeneric.o
+ .text.strpbrk  0x00000000       0x22 lib/libgeneric.o
+ .text.strtok   0x00000000       0x44 lib/libgeneric.o
+ .text.strsep   0x00000000       0x1c lib/libgeneric.o
+ .text.strswab  0x00000000       0x26 lib/libgeneric.o
+ .text.bcopy    0x00000000       0x16 lib/libgeneric.o
+ .text.memscan  0x00000000       0x18 lib/libgeneric.o
+ .text.strstr   0x00000000       0x34 lib/libgeneric.o
+ .text.memchr   0x00000000       0x1a lib/libgeneric.o
+ .text.simple_strtoul
+                0x00000000       0x70 lib/libgeneric.o
+ .text.strict_strtoul
+                0x00000000       0x40 lib/libgeneric.o
+ .text.simple_strtol
+                0x00000000       0x1a lib/libgeneric.o
+ .text.ustrtoul
+                0x00000000       0x40 lib/libgeneric.o
+ .text.simple_strtoull
+                0x00000000       0xa4 lib/libgeneric.o
+ .text.panic    0x00000000       0x30 lib/libgeneric.o
+ .text.__assert_fail
+                0x00000000       0x10 lib/libgeneric.o
+ .text.simple_itoa
+                0x00000000       0x38 lib/libgeneric.o
+ .rodata.hex_asc
+                0x00000000       0x11 lib/libgeneric.o
+ .data          0x00000000        0x0 lib/libgeneric.o
+ .bss           0x00000000        0x0 lib/libgeneric.o
+ .bss.___strtok
+                0x00000000        0x4 lib/libgeneric.o
+ .bss.local.3146
+                0x00000000       0x16 lib/libgeneric.o
+ .text          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+ .text.__aeabi_unwind_cpp_pr1
+                0x00000000        0x2 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_lshrdi3.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_lshrdi3.o)
+ .text          0x00000000       0x1c /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashrdi3.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashrdi3.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashrdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashrdi3.o)
+ .ARM.attributes
+                0x00000000       0x23 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashrdi3.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .ARM.extab     0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .ARM.extab     0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .data          0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+ .bss           0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+ .ARM.extab     0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00100100                . = 0x100100
+                0x00100100                . = ALIGN (0x4)
+
+.text           0x00100100      0xdd8
+                0x00100100                __start = .
+ arch/arm/cpu/armv7/start.o(.text)
+ .text          0x00100100      0x170 arch/arm/cpu/armv7/start.o
+                0x00100100                _start
+                0x00100140                _end_vect
+                0x00100140                _TEXT_BASE
+                0x00100144                _bss_start_ofs
+                0x00100148                _image_copy_end_ofs
+                0x0010014c                _bss_end_ofs
+                0x00100150                _end_ofs
+                0x00100154                IRQ_STACK_START_IN
+                0x00100190                relocate_code
+                0x0010021c                cpu_init_cp15
+ *(.text)
+ .text          0x00100270      0x278 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+                0x00100270                __udivsi3
+                0x00100270                __aeabi_uidiv
+                0x001004cc                __aeabi_uidivmod
+ .text          0x001004e8      0x2b0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divsi3.o)
+                0x001004e8                __aeabi_idiv
+                0x001004e8                __divsi3
+                0x0010077c                __aeabi_idivmod
+ .text          0x00100798       0x18 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_lshrdi3.o)
+                0x00100798                __aeabi_llsr
+                0x00100798                __lshrdi3
+ .text          0x001007b0       0x18 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+                0x001007b0                __ashldi3
+                0x001007b0                __aeabi_llsl
+ .text          0x001007c8       0x2c /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+                0x001007c8                __aeabi_uldivmod
+ .text          0x001007f4        0xc /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+                0x001007f4                __aeabi_ldiv0
+                0x001007f4                __aeabi_idiv0
+ .text          0x00100800       0x5c /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+                0x00100800                __gnu_ldivmod_helper
+                0x00100830                __gnu_uldivmod_helper
+ .text          0x0010085c      0x360 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+                0x0010085c                __divdi3
+ .text          0x00100bbc      0x31c /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+                0x00100bbc                __udivdi3
+
+.glue_7         0x00100ed8        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00100ed8        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00100ed8        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00100ed8        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00100ed8        0x0
+ .iplt          0x00000000        0x0 arch/arm/cpu/armv7/start.o
+
+.text.v7_dcache_maint_range
+                0x00100ed8       0x7c
+ .text.v7_dcache_maint_range
+                0x00100ed8       0x7c arch/arm/cpu/armv7/libarmv7.o
+
+.text.invalidate_dcache_range
+                0x00100f54       0x18
+ .text.invalidate_dcache_range
+                0x00100f54       0x18 arch/arm/cpu/armv7/libarmv7.o
+                0x00100f54                invalidate_dcache_range
+
+.text.flush_dcache_range
+                0x00100f6c       0x18
+ .text.flush_dcache_range
+                0x00100f6c       0x18 arch/arm/cpu/armv7/libarmv7.o
+                0x00100f6c                flush_dcache_range
+
+.text.flush_cache
+                0x00100f84        0x6
+ .text.flush_cache
+                0x00100f84        0x6 arch/arm/cpu/armv7/libarmv7.o
+                0x00100f84                flush_cache
+
+.text.__v7_outer_cache_flush_range
+                0x00100f8a        0x2
+ .text.__v7_outer_cache_flush_range
+                0x00100f8a        0x2 arch/arm/cpu/armv7/libarmv7.o
+                0x00100f8a                v7_outer_cache_flush_range
+                0x00100f8a                __v7_outer_cache_flush_range
+
+.text.__v7_outer_cache_inval_range
+                0x00100f8c        0x2
+ .text.__v7_outer_cache_inval_range
+                0x00100f8c        0x2 arch/arm/cpu/armv7/libarmv7.o
+                0x00100f8c                __v7_outer_cache_inval_range
+                0x00100f8c                v7_outer_cache_inval_range
+
+.text.save_boot_params_default
+                0x00100f8e        0x2
+ .text.save_boot_params_default
+                0x00100f8e        0x2 arch/arm/cpu/armv7/libarmv7.o
+                0x00100f8e                save_boot_params_default
+                0x00100f8e                save_boot_params
+
+.text.get_ticks
+                0x00100f90        0xc
+ .text.get_ticks
+                0x00100f90        0xc arch/arm/cpu/armv7/rda/librda.o
+                0x00100f90                get_ticks
+
+.text.get_timer
+                0x00100f9c       0x30
+ .text.get_timer
+                0x00100f9c       0x30 arch/arm/cpu/armv7/rda/librda.o
+                0x00100f9c                get_timer
+
+.text.__udelay  0x00100fcc       0x24
+ .text.__udelay
+                0x00100fcc       0x24 arch/arm/cpu/armv7/rda/librda.o
+                0x00100fcc                __udelay
+
+.text._serial_enable_rtscts
+                0x00100ff0       0x10
+ .text._serial_enable_rtscts
+                0x00100ff0       0x10 arch/arm/cpu/armv7/rda/librda.o
+                0x00100ff0                _serial_enable_rtscts
+
+.text._serial_getc
+                0x00101000       0x14
+ .text._serial_getc
+                0x00101000       0x14 arch/arm/cpu/armv7/rda/librda.o
+                0x00101000                _serial_getc
+
+.text._serial_putc_hw
+                0x00101014       0x14
+ .text._serial_putc_hw
+                0x00101014       0x14 arch/arm/cpu/armv7/rda/librda.o
+                0x00101014                _serial_putc_hw
+
+.text._serial_putc
+                0x00101028       0x1c
+ .text._serial_putc
+                0x00101028       0x1c arch/arm/cpu/armv7/rda/librda.o
+                0x00101028                _serial_putc
+
+.text._serial_puts
+                0x00101044       0x16
+ .text._serial_puts
+                0x00101044       0x16 arch/arm/cpu/armv7/rda/librda.o
+                0x00101044                _serial_puts
+
+.text.serial_init
+                0x0010105a        0x4
+ .text.serial_init
+                0x0010105a        0x4 arch/arm/cpu/armv7/rda/librda.o
+                0x0010105a                serial_init
+
+.text.serial_getc
+                0x0010105e        0x6
+ .text.serial_getc
+                0x0010105e        0x6 arch/arm/cpu/armv7/rda/librda.o
+                0x0010105e                serial_getc
+
+.text.serial_tstc
+                0x00101064       0x10
+ .text.serial_tstc
+                0x00101064       0x10 arch/arm/cpu/armv7/rda/librda.o
+                0x00101064                serial_tstc
+
+.text.serial_putc
+                0x00101074        0x6
+ .text.serial_putc
+                0x00101074        0x6 arch/arm/cpu/armv7/rda/librda.o
+                0x00101074                serial_putc
+
+.text.serial_puts
+                0x0010107a        0x6
+ .text.serial_puts
+                0x0010107a        0x6 arch/arm/cpu/armv7/rda/librda.o
+                0x0010107a                serial_puts
+
+.text.hal_IfcChannelRelease
+                0x00101080       0x44
+ .text.hal_IfcChannelRelease
+                0x00101080       0x44 arch/arm/cpu/armv7/rda/librda.o
+                0x00101080                hal_IfcChannelRelease
+
+.text.hal_IfcChannelFlush
+                0x001010c4       0x34
+ .text.hal_IfcChannelFlush
+                0x001010c4       0x34 arch/arm/cpu/armv7/rda/librda.o
+                0x001010c4                hal_IfcChannelFlush
+
+.text.hal_IfcChannelIsFifoEmpty
+                0x001010f8       0x2c
+ .text.hal_IfcChannelIsFifoEmpty
+                0x001010f8       0x2c arch/arm/cpu/armv7/rda/librda.o
+                0x001010f8                hal_IfcChannelIsFifoEmpty
+
+.text.hal_IfcTransferStart
+                0x00101124       0x60
+ .text.hal_IfcTransferStart
+                0x00101124       0x60 arch/arm/cpu/armv7/rda/librda.o
+                0x00101124                hal_IfcTransferStart
+
+.text.rda_hwcfg_reg_set
+                0x00101184       0x1e
+ .text.rda_hwcfg_reg_set
+                0x00101184       0x1e arch/arm/cpu/armv7/rda/librda.o
+                0x00101184                rda_hwcfg_reg_set
+
+.text.rda_hwcfg_reg_get
+                0x001011a2        0xc
+ .text.rda_hwcfg_reg_get
+                0x001011a2        0xc arch/arm/cpu/armv7/rda/librda.o
+                0x001011a2                rda_hwcfg_reg_get
+
+.text.rda_hwcfg_get
+                0x001011b0       0x10
+ .text.rda_hwcfg_get
+                0x001011b0       0x10 arch/arm/cpu/armv7/rda/librda.o
+                0x001011b0                rda_hwcfg_get
+
+.text.rda_swcfg_reg_set
+                0x001011c0       0x1e
+ .text.rda_swcfg_reg_set
+                0x001011c0       0x1e arch/arm/cpu/armv7/rda/librda.o
+                0x001011c0                rda_swcfg_reg_set
+
+.text.rda_swcfg_reg_get
+                0x001011de        0xc
+ .text.rda_swcfg_reg_get
+                0x001011de        0xc arch/arm/cpu/armv7/rda/librda.o
+                0x001011de                rda_swcfg_reg_get
+
+.text.hwcfg_swcfg_init
+                0x001011ec       0x34
+ .text.hwcfg_swcfg_init
+                0x001011ec       0x34 arch/arm/cpu/armv7/rda/librda.o
+                0x001011ec                hwcfg_swcfg_init
+
+.text.rda_swcfg_get
+                0x00101220       0x10
+ .text.rda_swcfg_get
+                0x00101220       0x10 arch/arm/cpu/armv7/rda/librda.o
+                0x00101220                rda_swcfg_get
+
+.text.rda_metal_id_get
+                0x00101230       0x10
+ .text.rda_metal_id_get
+                0x00101230       0x10 arch/arm/cpu/armv7/rda/librda.o
+                0x00101230                rda_metal_id_get
+
+.text.rda_nand_iodrive_set
+                0x00101240       0x14
+ .text.rda_nand_iodrive_set
+                0x00101240       0x14 arch/arm/cpu/armv7/rda/librda.o
+                0x00101240                rda_nand_iodrive_set
+
+.text.rda_media_get
+                0x00101254        0x4
+ .text.rda_media_get
+                0x00101254        0x4 arch/arm/cpu/armv7/rda/librda.o
+                0x00101254                rda_media_get
+
+.text.reset_cpu
+                0x00101258       0x18
+ .text.reset_cpu
+                0x00101258       0x18 arch/arm/cpu/armv7/rda/librda.o
+                0x00101258                reset_cpu
+
+.text.rda_bm_is_calib
+                0x00101270        0xc
+ .text.rda_bm_is_calib
+                0x00101270        0xc arch/arm/cpu/armv7/rda/librda.o
+                0x00101270                rda_bm_is_calib
+
+.text.rda_bm_is_autocall
+                0x0010127c        0xc
+ .text.rda_bm_is_autocall
+                0x0010127c        0xc arch/arm/cpu/armv7/rda/librda.o
+                0x0010127c                rda_bm_is_autocall
+
+.text.rda_bm_is_download
+                0x00101288        0xc
+ .text.rda_bm_is_download
+                0x00101288        0xc arch/arm/cpu/armv7/rda/librda.o
+                0x00101288                rda_bm_is_download
+
+.text.rda_bm_download_key_pressed
+                0x00101294       0x2c
+ .text.rda_bm_download_key_pressed
+                0x00101294       0x2c arch/arm/cpu/armv7/rda/librda.o
+                0x00101294                rda_bm_download_key_pressed
+
+.text.rda_reboot
+                0x001012c0       0x64
+ .text.rda_reboot
+                0x001012c0       0x64 arch/arm/cpu/armv7/rda/librda.o
+                0x001012c0                rda_reboot
+
+.text.rda_dump_buf
+                0x00101324       0x7c
+ .text.rda_dump_buf
+                0x00101324       0x7c arch/arm/cpu/armv7/rda/librda.o
+                0x00101324                rda_dump_buf
+
+.text.ispi_tx_finished
+                0x001013a0       0x24
+ .text.ispi_tx_finished
+                0x001013a0       0x24 arch/arm/cpu/armv7/rda/librda.o
+
+.text.ispi_send_data.constprop.0
+                0x001013c4       0x2c
+ .text.ispi_send_data.constprop.0
+                0x001013c4       0x2c arch/arm/cpu/armv7/rda/librda.o
+
+.text.ispi_open
+                0x001013f0       0x30
+ .text.ispi_open
+                0x001013f0       0x30 arch/arm/cpu/armv7/rda/librda.o
+                0x001013f0                ispi_open
+
+.text.ispi_reg_write
+                0x00101420       0x30
+ .text.ispi_reg_write
+                0x00101420       0x30 arch/arm/cpu/armv7/rda/librda.o
+                0x00101420                ispi_reg_write
+
+.text.ispi_reg_read
+                0x00101450       0x48
+ .text.ispi_reg_read
+                0x00101450       0x48 arch/arm/cpu/armv7/rda/librda.o
+                0x00101450                ispi_reg_read
+
+.text.rda_read_efuse
+                0x00101498       0x44
+ .text.rda_read_efuse
+                0x00101498       0x44 arch/arm/cpu/armv7/rda/librda.o
+                0x00101498                rda_read_efuse
+
+.text.set_security_context
+                0x001014dc      0x118
+ .text.set_security_context
+                0x001014dc      0x118 arch/arm/cpu/armv7/rda/librda.o
+                0x001014dc                set_security_context
+
+.text.image_sign_verify
+                0x001015f4       0x40
+ .text.image_sign_verify
+                0x001015f4       0x40 arch/arm/cpu/armv7/rda/librda.o
+                0x001015f4                image_sign_verify
+
+.text.image_sign_verify_uimage
+                0x00101634        0xa
+ .text.image_sign_verify_uimage
+                0x00101634        0xa arch/arm/cpu/armv7/rda/librda.o
+                0x00101634                image_sign_verify_uimage
+
+.text.get_chip_security_context
+                0x00101640       0x64
+ .text.get_chip_security_context
+                0x00101640       0x64 arch/arm/cpu/armv7/rda/librda.o
+                0x00101640                get_chip_security_context
+
+.text.__fswab32
+                0x001016a4        0xc
+ .text.__fswab32
+                0x001016a4        0x4 arch/arm/cpu/armv7/rda/librda.o
+ .text.__fswab32
+                0x001016a8        0x4 common/libcommon.o
+ .text.__fswab32
+                0x001016ac        0x4 drivers/mmc/libmmc.o
+
+.text.image_get_magic
+                0x001016b0        0x6
+ .text.image_get_magic
+                0x001016b0        0x6 arch/arm/cpu/armv7/rda/librda.o
+
+.text.board_init_f
+                0x001016b8       0x14
+ .text.board_init_f
+                0x001016b8       0x14 arch/arm/cpu/armv7/rda/librda.o
+                0x001016b8                board_init_f
+
+.text.check_uimage
+                0x001016cc       0xcc
+ .text.check_uimage
+                0x001016cc       0xcc arch/arm/cpu/armv7/rda/librda.o
+                0x001016cc                check_uimage
+
+.text.board_init_r
+                0x00101798       0xf4
+ .text.board_init_r
+                0x00101798       0xf4 arch/arm/cpu/armv7/rda/librda.o
+                0x00101798                board_init_r
+
+.text.getcxmodem
+                0x0010188c       0x16
+ .text.getcxmodem
+                0x0010188c       0x16 arch/arm/cpu/armv7/rda/librda.o
+
+.text.load_serial_xmodem.constprop.0
+                0x001018a4       0xa4
+ .text.load_serial_xmodem.constprop.0
+                0x001018a4       0xa4 arch/arm/cpu/armv7/rda/librda.o
+
+.text.xmodem_boot
+                0x00101948       0x30
+ .text.xmodem_boot
+                0x00101948       0x30 arch/arm/cpu/armv7/rda/librda.o
+                0x00101948                xmodem_boot
+
+.text.get_default_clock_config
+                0x00101978        0x8
+ .text.get_default_clock_config
+                0x00101978        0x8 board/rda/rda8810/librda8810.o
+                0x00101978                get_default_clock_config
+
+.text.sys_shutdown_pll
+                0x00101980       0x34
+ .text.sys_shutdown_pll
+                0x00101980       0x34 board/rda/rda8810/librda8810.o
+
+.text.sys_setup_clk
+                0x001019b4       0x8c
+ .text.sys_setup_clk
+                0x001019b4       0x8c board/rda/rda8810/librda8810.o
+
+.text.ispi_reg_write_and_save
+                0x00101a40       0x64
+ .text.ispi_reg_write_and_save
+                0x00101a40       0x64 board/rda/rda8810/librda8810.o
+
+.text.pll_freq_set
+                0x00101aa4       0xf8
+ .text.pll_freq_set
+                0x00101aa4       0xf8 board/rda/rda8810/librda8810.o
+
+.text.pll_setup_freq
+                0x00101b9c       0x34
+ .text.pll_setup_freq
+                0x00101b9c       0x34 board/rda/rda8810/librda8810.o
+
+.text.pll_setup_init_cal_dynamic
+                0x00101bd0       0x64
+ .text.pll_setup_init_cal_dynamic
+                0x00101bd0       0x64 board/rda/rda8810/librda8810.o
+
+.text.pll_setup_init
+                0x00101c34      0x400
+ .text.pll_setup_init
+                0x00101c34      0x400 board/rda/rda8810/librda8810.o
+
+.text.sys_reset_mem
+                0x00102034       0x20
+ .text.sys_reset_mem
+                0x00102034       0x20 board/rda/rda8810/librda8810.o
+
+.text.pll_patch_reg_set
+                0x00102054       0x64
+ .text.pll_patch_reg_set
+                0x00102054       0x64 board/rda/rda8810/librda8810.o
+                0x00102054                pll_patch_reg_set
+
+.text.pll_patch_reg_check
+                0x001020b8       0x58
+ .text.pll_patch_reg_check
+                0x001020b8       0x58 board/rda/rda8810/librda8810.o
+                0x001020b8                pll_patch_reg_check
+
+.text.sys_setup_pll
+                0x00102110      0x18c
+ .text.sys_setup_pll
+                0x00102110      0x18c board/rda/rda8810/librda8810.o
+
+.text.clock_init
+                0x0010229c      0x47c
+ .text.clock_init
+                0x0010229c      0x47c board/rda/rda8810/librda8810.o
+                0x0010229c                clock_init
+
+.text.config_ddr_phy
+                0x00102718       0xcc
+ .text.config_ddr_phy
+                0x00102718       0xcc board/rda/rda8810/librda8810.o
+                0x00102718                config_ddr_phy
+
+.text.config_dmc400
+                0x001027e4      0x5ec
+ .text.config_dmc400
+                0x001027e4      0x5ec board/rda/rda8810/librda8810.o
+                0x001027e4                config_dmc400
+
+.text.axi_prio_init
+                0x00102dd0       0x38
+ .text.axi_prio_init
+                0x00102dd0       0x38 board/rda/rda8810/librda8810.o
+                0x00102dd0                axi_prio_init
+
+.text.axi_outstandings_init
+                0x00102e08       0x26
+ .text.axi_outstandings_init
+                0x00102e08       0x26 board/rda/rda8810/librda8810.o
+                0x00102e08                axi_outstandings_init
+
+.text.ddr_init  0x00102e2e      0x110
+ .text.ddr_init
+                0x00102e2e      0x110 board/rda/rda8810/librda8810.o
+                0x00102e2e                ddr_init
+
+.text.fgetc     0x00102f40       0x1c
+ .text.fgetc    0x00102f40       0x1c common/libcommon.o
+                0x00102f40                fgetc
+
+.text.ftstc     0x00102f5c       0x1c
+ .text.ftstc    0x00102f5c       0x1c common/libcommon.o
+                0x00102f5c                ftstc
+
+.text.fputc     0x00102f78       0x18
+ .text.fputc    0x00102f78       0x18 common/libcommon.o
+                0x00102f78                fputc
+
+.text.fputs     0x00102f90       0x18
+ .text.fputs    0x00102f90       0x18 common/libcommon.o
+                0x00102f90                fputs
+
+.text.getc      0x00102fa8       0x18
+ .text.getc     0x00102fa8       0x18 common/libcommon.o
+                0x00102fa8                getc
+
+.text.tstc      0x00102fc0       0x18
+ .text.tstc     0x00102fc0       0x18 common/libcommon.o
+                0x00102fc0                tstc
+
+.text.putc      0x00102fd8       0x1a
+ .text.putc     0x00102fd8       0x1a common/libcommon.o
+                0x00102fd8                putc
+
+.text.puts      0x00102ff2       0x1a
+ .text.puts     0x00102ff2       0x1a common/libcommon.o
+                0x00102ff2                puts
+
+.text.printf    0x0010300c       0x36
+ .text.printf   0x0010300c       0x36 common/libcommon.o
+                0x0010300c                printf
+
+.text.image_get_data_size
+                0x00103042        0x6
+ .text.image_get_data_size
+                0x00103042        0x6 common/libcommon.o
+
+.text.image_check_hcrc
+                0x00103048       0x30
+ .text.image_check_hcrc
+                0x00103048       0x30 common/libcommon.o
+                0x00103048                image_check_hcrc
+
+.text.image_check_dcrc
+                0x00103078       0x2a
+ .text.image_check_dcrc
+                0x00103078       0x2a common/libcommon.o
+                0x00103078                image_check_dcrc
+
+.text.CYGACC_COMM_IF_GETC_TIMEOUT
+                0x001030a4       0x2c
+ .text.CYGACC_COMM_IF_GETC_TIMEOUT
+                0x001030a4       0x2c common/libcommon.o
+                0x001030a4                CYGACC_COMM_IF_GETC_TIMEOUT
+
+.text.xyzModem_flush
+                0x001030d0       0x1c
+ .text.xyzModem_flush
+                0x001030d0       0x1c common/libcommon.o
+
+.text.xyzModem_get_hdr
+                0x001030ec      0x194
+ .text.xyzModem_get_hdr
+                0x001030ec      0x194 common/libcommon.o
+
+.text.parse_num
+                0x00103280       0xb0
+ .text.parse_num
+                0x00103280       0xb0 common/libcommon.o
+                0x00103280                parse_num
+
+.text.xyzModem_stream_open
+                0x00103330       0xf4
+ .text.xyzModem_stream_open
+                0x00103330       0xf4 common/libcommon.o
+                0x00103330                xyzModem_stream_open
+
+.text.xyzModem_stream_read
+                0x00103424      0x198
+ .text.xyzModem_stream_read
+                0x00103424      0x198 common/libcommon.o
+                0x00103424                xyzModem_stream_read
+
+.text.xyzModem_stream_close
+                0x001035bc       0x40
+ .text.xyzModem_stream_close
+                0x001035bc       0x40 common/libcommon.o
+                0x001035bc                xyzModem_stream_close
+
+.text.xyzModem_stream_terminate
+                0x001035fc       0x68
+ .text.xyzModem_stream_terminate
+                0x001035fc       0x68 common/libcommon.o
+                0x001035fc                xyzModem_stream_terminate
+
+.text.xyzModem_error
+                0x00103664       0x18
+ .text.xyzModem_error
+                0x00103664       0x18 common/libcommon.o
+                0x00103664                xyzModem_error
+
+.text.emmc_spl_load_image
+                0x0010367c       0x48
+ .text.emmc_spl_load_image
+                0x0010367c       0x48 drivers/mmc/libmmc.o
+                0x0010367c                emmc_spl_load_image
+
+.text.emmc_init
+                0x001036c4       0x9c
+ .text.emmc_init
+                0x001036c4       0x9c drivers/mmc/libmmc.o
+                0x001036c4                emmc_init
+
+.text.emmc_boot
+                0x00103760       0x30
+ .text.emmc_boot
+                0x00103760       0x30 drivers/mmc/libmmc.o
+                0x00103760                emmc_boot
+
+.text.mmc_berase
+                0x00103790        0x4
+ .text.mmc_berase
+                0x00103790        0x4 drivers/mmc/libmmc.o
+
+.text.mmc_bwrite
+                0x00103794        0x4
+ .text.mmc_bwrite
+                0x00103794        0x4 drivers/mmc/libmmc.o
+
+.text.mmc_send_op_cond_iter
+                0x00103798       0x50
+ .text.mmc_send_op_cond_iter
+                0x00103798       0x50 drivers/mmc/libmmc.o
+
+.text.mmc_send_ext_csd
+                0x001037e8       0x2e
+ .text.mmc_send_ext_csd
+                0x001037e8       0x2e drivers/mmc/libmmc.o
+
+.text.mmc_set_capacity
+                0x00103816       0x6a
+ .text.mmc_set_capacity
+                0x00103816       0x6a drivers/mmc/libmmc.o
+
+.text.mmc_go_idle
+                0x00103880       0x34
+ .text.mmc_go_idle
+                0x00103880       0x34 drivers/mmc/libmmc.o
+
+.text.sd_switch.constprop.6
+                0x001038b4       0x38
+ .text.sd_switch.constprop.6
+                0x001038b4       0x38 drivers/mmc/libmmc.o
+
+.text.__board_mmc_getcd
+                0x001038ec        0x6
+ .text.__board_mmc_getcd
+                0x001038ec        0x6 drivers/mmc/libmmc.o
+                0x001038ec                __board_mmc_getcd
+                0x001038ec                board_mmc_getcd
+
+.text.mmc_send_status
+                0x001038f4       0x8c
+ .text.mmc_send_status
+                0x001038f4       0x8c drivers/mmc/libmmc.o
+                0x001038f4                mmc_send_status
+
+.text.mmc_switch.isra.1
+                0x00103980       0x36
+ .text.mmc_switch.isra.1
+                0x00103980       0x36 drivers/mmc/libmmc.o
+
+.text.mmc_set_blocklen
+                0x001039b6       0x1e
+ .text.mmc_set_blocklen
+                0x001039b6       0x1e drivers/mmc/libmmc.o
+                0x001039b6                mmc_set_blocklen
+
+.text.find_mmc_device
+                0x001039d4       0x2c
+ .text.find_mmc_device
+                0x001039d4       0x2c drivers/mmc/libmmc.o
+                0x001039d4                find_mmc_device
+
+.text.mmc_bread
+                0x00103a00       0xe0
+ .text.mmc_bread
+                0x00103a00       0xe0 drivers/mmc/libmmc.o
+
+.text.mmc_send_op_cond
+                0x00103ae0       0x42
+ .text.mmc_send_op_cond
+                0x00103ae0       0x42 drivers/mmc/libmmc.o
+                0x00103ae0                mmc_send_op_cond
+
+.text.mmc_complete_op_cond
+                0x00103b22       0x5c
+ .text.mmc_complete_op_cond
+                0x00103b22       0x5c drivers/mmc/libmmc.o
+                0x00103b22                mmc_complete_op_cond
+
+.text.mmc_getcd
+                0x00103b7e       0x1c
+ .text.mmc_getcd
+                0x00103b7e       0x1c drivers/mmc/libmmc.o
+                0x00103b7e                mmc_getcd
+
+.text.mmc_set_clock
+                0x00103b9a       0x1c
+ .text.mmc_set_clock
+                0x00103b9a       0x1c drivers/mmc/libmmc.o
+                0x00103b9a                mmc_set_clock
+
+.text.mmc_startup
+                0x00103bb8      0x794
+ .text.mmc_startup
+                0x00103bb8      0x794 drivers/mmc/libmmc.o
+
+.text.mmc_register
+                0x0010434c       0x60
+ .text.mmc_register
+                0x0010434c       0x60 drivers/mmc/libmmc.o
+                0x0010434c                mmc_register
+
+.text.mmc_start_init
+                0x001043ac      0x174
+ .text.mmc_start_init
+                0x001043ac      0x174 drivers/mmc/libmmc.o
+                0x001043ac                mmc_start_init
+
+.text.mmc_init  0x00104520      0x124
+ .text.mmc_init
+                0x00104520      0x124 drivers/mmc/libmmc.o
+                0x00104520                mmc_init
+
+.text.__def_mmc_init
+                0x00104644        0x6
+ .text.__def_mmc_init
+                0x00104644        0x6 drivers/mmc/libmmc.o
+                0x00104644                cpu_mmc_init
+
+.text.mmc_initialize
+                0x0010464c       0x44
+ .text.mmc_initialize
+                0x0010464c       0x44 drivers/mmc/libmmc.o
+                0x0010464c                mmc_initialize
+
+.text.mmc_host_reset
+                0x00104690        0x4
+ .text.mmc_host_reset
+                0x00104690        0x4 drivers/mmc/libmmc.o
+
+.text.host_set_ios
+                0x00104694       0xa4
+ .text.host_set_ios
+                0x00104694       0xa4 drivers/mmc/libmmc.o
+
+.text.hal_data_transfer_stop
+                0x00104738       0x38
+ .text.hal_data_transfer_stop
+                0x00104738       0x38 drivers/mmc/libmmc.o
+
+.text.hal_wait_data_transfer_done
+                0x00104770       0xa0
+ .text.hal_wait_data_transfer_done
+                0x00104770       0xa0 drivers/mmc/libmmc.o
+
+.text.do_command
+                0x00104810      0x184
+ .text.do_command
+                0x00104810      0x184 drivers/mmc/libmmc.o
+
+.text.hal_data_transfer_start
+                0x00104994       0x84
+ .text.hal_data_transfer_start
+                0x00104994       0x84 drivers/mmc/libmmc.o
+
+.text.host_request
+                0x00104a18      0x10c
+ .text.host_request
+                0x00104a18      0x10c drivers/mmc/libmmc.o
+
+.text.alloc_mmc_struct
+                0x00104b24       0x3c
+ .text.alloc_mmc_struct
+                0x00104b24       0x3c drivers/mmc/libmmc.o
+                0x00104b24                alloc_mmc_struct
+
+.text.mmc_set_host_mclk_adj_inv
+                0x00104b60       0x12
+ .text.mmc_set_host_mclk_adj_inv
+                0x00104b60       0x12 drivers/mmc/libmmc.o
+                0x00104b60                mmc_set_host_mclk_adj_inv
+
+.text.rda_mmc_init
+                0x00104b74      0x158
+ .text.rda_mmc_init
+                0x00104b74      0x158 drivers/mmc/libmmc.o
+                0x00104b74                rda_mmc_init
+
+.text.board_mmc_init
+                0x00104ccc        0x4
+ .text.board_mmc_init
+                0x00104ccc        0x4 drivers/mmc/libmmc.o
+                0x00104ccc                board_mmc_init
+
+.text.nand_is_bad_block
+                0x00104cd0       0x58
+ .text.nand_is_bad_block
+                0x00104cd0       0x58 drivers/mtd/nand/libnand.o
+
+.text.nand_read_page
+                0x00104d28       0x3c
+ .text.nand_read_page
+                0x00104d28       0x3c drivers/mtd/nand/libnand.o
+
+.text.nand_spl_read_skip_bad
+                0x00104d64      0x1dc
+ .text.nand_spl_read_skip_bad
+                0x00104d64      0x1dc drivers/mtd/nand/libnand.o
+                0x00104d64                nand_spl_read_skip_bad
+
+.text.nand_spl_load_image
+                0x00104f40       0xbc
+ .text.nand_spl_load_image
+                0x00104f40       0xbc drivers/mtd/nand/libnand.o
+                0x00104f40                nand_spl_load_image
+
+.text.nand_init
+                0x00104ffc       0x7c
+ .text.nand_init
+                0x00104ffc       0x7c drivers/mtd/nand/libnand.o
+                0x00104ffc                nand_init
+
+.text.nand_boot
+                0x00105078       0x4c
+ .text.nand_boot
+                0x00105078       0x4c drivers/mtd/nand/libnand.o
+                0x00105078                nand_boot
+
+.text.nand_wait_ready
+                0x001050c4       0x28
+ .text.nand_wait_ready
+                0x001050c4       0x28 drivers/mtd/nand/libnand.o
+                0x001050c4                nand_wait_ready
+
+.text.nand_rda_read_byte
+                0x001050ec       0x16
+ .text.nand_rda_read_byte
+                0x001050ec       0x16 drivers/mtd/nand/libnand.o
+
+.text.nand_rda_read_word
+                0x00105102       0x16
+ .text.nand_rda_read_word
+                0x00105102       0x16 drivers/mtd/nand/libnand.o
+
+.text.nand_rda_hwcontrol
+                0x00105118        0x2
+ .text.nand_rda_hwcontrol
+                0x00105118        0x2 drivers/mtd/nand/libnand.o
+
+.text.nand_rda_dev_ready
+                0x0010511a        0x4
+ .text.nand_rda_dev_ready
+                0x0010511a        0x4 drivers/mtd/nand/libnand.o
+
+.text.nand_rda_init_size
+                0x0010511e       0x1c
+ .text.nand_rda_init_size
+                0x0010511e       0x1c drivers/mtd/nand/libnand.o
+
+.text.nand_rda_write_cache
+                0x0010513a       0x24
+ .text.nand_rda_write_cache
+                0x0010513a       0x24 drivers/mtd/nand/libnand.o
+
+.text.hal_wait_cmd_complete
+                0x00105160       0x78
+ .text.hal_wait_cmd_complete
+                0x00105160       0x78 drivers/mtd/nand/libnand.o
+
+.text.nand_rda_logic_read_cache
+                0x001051d8       0x4c
+ .text.nand_rda_logic_read_cache
+                0x001051d8       0x4c drivers/mtd/nand/libnand.o
+
+.text.nand_rda_cmdfunc
+                0x00105224      0x2cc
+ .text.nand_rda_cmdfunc
+                0x00105224      0x2cc drivers/mtd/nand/libnand.o
+
+.text.nand_read_id
+                0x001054f0       0x40
+ .text.nand_read_id
+                0x001054f0       0x40 drivers/mtd/nand/libnand.o
+
+.text.read_ID   0x00105530       0x14
+ .text.read_ID  0x00105530       0x14 drivers/mtd/nand/libnand.o
+
+.text.nand_checksum32.constprop.5
+                0x00105544       0x14
+ .text.nand_checksum32.constprop.5
+                0x00105544       0x14 drivers/mtd/nand/libnand.o
+
+.text.nand_rda_write_buf
+                0x00105558      0x1a4
+ .text.nand_rda_write_buf
+                0x00105558      0x1a4 drivers/mtd/nand/libnand.o
+
+.text.nand_sw_ecc_check.constprop.6
+                0x001056fc       0xae
+ .text.nand_sw_ecc_check.constprop.6
+                0x001056fc       0xae drivers/mtd/nand/libnand.o
+
+.text.nand_rda_read_buf
+                0x001057ac      0x174
+ .text.nand_rda_read_buf
+                0x001057ac      0x174 drivers/mtd/nand/libnand.o
+
+.text.get_master_clk_rate
+                0x00105920       0x28
+ .text.get_master_clk_rate
+                0x00105920       0x28 drivers/mtd/nand/libnand.o
+                0x00105920                get_master_clk_rate
+
+.text.rda_nand_init
+                0x00105948      0x3d8
+ .text.rda_nand_init
+                0x00105948      0x3d8 drivers/mtd/nand/libnand.o
+                0x00105948                rda_nand_init
+
+.text.spi_nand_rda_read_byte
+                0x00105d20       0x16
+ .text.spi_nand_rda_read_byte
+                0x00105d20       0x16 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_rda_read_word
+                0x00105d36       0x16
+ .text.spi_nand_rda_read_word
+                0x00105d36       0x16 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_rda_hwcontrol
+                0x00105d4c        0x2
+ .text.spi_nand_rda_hwcontrol
+                0x00105d4c        0x2 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_rda_dev_ready
+                0x00105d4e        0x4
+ .text.spi_nand_rda_dev_ready
+                0x00105d4e        0x4 drivers/mtd/nand/libnand.o
+
+.text.nand_rda_select_chip
+                0x00105d52        0x2
+ .text.nand_rda_select_chip
+                0x00105d52        0x2 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_rda_wait
+                0x00105d54       0x1a
+ .text.spi_nand_rda_wait
+                0x00105d54       0x1a drivers/mtd/nand/libnand.o
+
+.text.spi_nand_rda_init_size
+                0x00105d6e       0x1c
+ .text.spi_nand_rda_init_size
+                0x00105d6e       0x1c drivers/mtd/nand/libnand.o
+
+.text.wait_spi_busy
+                0x00105d8c       0x10
+ .text.wait_spi_busy
+                0x00105d8c       0x10 drivers/mtd/nand/libnand.o
+                0x00105d8c                wait_spi_busy
+
+.text.start_flash_operation
+                0x00105d9c       0x60
+ .text.start_flash_operation
+                0x00105d9c       0x60 drivers/mtd/nand/libnand.o
+
+.text.nand_spi_fifo_word_read_set
+                0x00105dfc       0x24
+ .text.nand_spi_fifo_word_read_set
+                0x00105dfc       0x24 drivers/mtd/nand/libnand.o
+
+.text.wait_spi_tx_fifo_empty
+                0x00105e20       0x10
+ .text.wait_spi_tx_fifo_empty
+                0x00105e20       0x10 drivers/mtd/nand/libnand.o
+                0x00105e20                wait_spi_tx_fifo_empty
+
+.text.wait_spi_rx_fifo_empty
+                0x00105e30       0x10
+ .text.wait_spi_rx_fifo_empty
+                0x00105e30       0x10 drivers/mtd/nand/libnand.o
+                0x00105e30                wait_spi_rx_fifo_empty
+
+.text.spi_tx_fifo_clear
+                0x00105e40       0x10
+ .text.spi_tx_fifo_clear
+                0x00105e40       0x10 drivers/mtd/nand/libnand.o
+                0x00105e40                spi_tx_fifo_clear
+
+.text.push_fifo_data
+                0x00105e50       0x38
+ .text.push_fifo_data
+                0x00105e50       0x38 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_flash_write_data2cache_random
+                0x00105e88       0x88
+ .text.spi_nand_flash_write_data2cache_random
+                0x00105e88       0x88 drivers/mtd/nand/libnand.o
+
+.text.spi_rx_fifo_clear
+                0x00105f10       0x10
+ .text.spi_rx_fifo_clear
+                0x00105f10       0x10 drivers/mtd/nand/libnand.o
+                0x00105f10                spi_rx_fifo_clear
+
+.text.spi_nand_flash_read_from_cache
+                0x00105f20      0x160
+ .text.spi_nand_flash_read_from_cache
+                0x00105f20      0x160 drivers/mtd/nand/libnand.o
+
+.text.get_flash_feature
+                0x00106080       0x48
+ .text.get_flash_feature
+                0x00106080       0x48 drivers/mtd/nand/libnand.o
+                0x00106080                get_flash_feature
+
+.text.set_flash_feature
+                0x001060c8       0x34
+ .text.set_flash_feature
+                0x001060c8       0x34 drivers/mtd/nand/libnand.o
+                0x001060c8                set_flash_feature
+
+.text.enable_spi_nand_flash_quad_mode
+                0x001060fc       0x20
+ .text.enable_spi_nand_flash_quad_mode
+                0x001060fc       0x20 drivers/mtd/nand/libnand.o
+                0x001060fc                enable_spi_nand_flash_quad_mode
+
+.text.disable_spi_nand_flash_quad_mode
+                0x0010611c       0x1c
+ .text.disable_spi_nand_flash_quad_mode
+                0x0010611c       0x1c drivers/mtd/nand/libnand.o
+                0x0010611c                disable_spi_nand_flash_quad_mode
+
+.text.enable_spi_nand_flash_ecc_mode
+                0x00106138       0x16
+ .text.enable_spi_nand_flash_ecc_mode
+                0x00106138       0x16 drivers/mtd/nand/libnand.o
+                0x00106138                enable_spi_nand_flash_ecc_mode
+
+.text.get_flash_status
+                0x00106150       0x4c
+ .text.get_flash_status
+                0x00106150       0x4c drivers/mtd/nand/libnand.o
+                0x00106150                get_flash_status
+
+.text.spi_nand_reset_flash
+                0x0010619c       0x22
+ .text.spi_nand_reset_flash
+                0x0010619c       0x22 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_flash_page_read2cache
+                0x001061be       0x40
+ .text.spi_nand_flash_page_read2cache
+                0x001061be       0x40 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_rda_read_buf
+                0x00106200       0x90
+ .text.spi_nand_rda_read_buf
+                0x00106200       0x90 drivers/mtd/nand/libnand.o
+
+.text.disable_flash_protection
+                0x00106290       0x38
+ .text.disable_flash_protection
+                0x00106290       0x38 drivers/mtd/nand/libnand.o
+                0x00106290                disable_flash_protection
+
+.text.spi_nand_flash_operate_mode_setting
+                0x001062c8       0x28
+ .text.spi_nand_flash_operate_mode_setting
+                0x001062c8       0x28 drivers/mtd/nand/libnand.o
+                0x001062c8                spi_nand_flash_operate_mode_setting
+
+.text.get_flash_ID
+                0x001062f0       0x50
+ .text.get_flash_ID
+                0x001062f0       0x50 drivers/mtd/nand/libnand.o
+                0x001062f0                get_flash_ID
+
+.text.spi_nand_read_id
+                0x00106340       0x28
+ .text.spi_nand_read_id
+                0x00106340       0x28 drivers/mtd/nand/libnand.o
+
+.text.nand_spi_init
+                0x00106368       0x40
+ .text.nand_spi_init
+                0x00106368       0x40 drivers/mtd/nand/libnand.o
+                0x00106368                nand_spi_init
+
+.text.spi_nand_flash_write_one_page_cache_random
+                0x001063a8       0x5c
+ .text.spi_nand_flash_write_one_page_cache_random
+                0x001063a8       0x5c drivers/mtd/nand/libnand.o
+                0x001063a8                spi_nand_flash_write_one_page_cache_random
+
+.text.spi_nand_rda_write_buf
+                0x00106404       0x30
+ .text.spi_nand_rda_write_buf
+                0x00106404       0x30 drivers/mtd/nand/libnand.o
+
+.text.spi_nand_flash_block_erase
+                0x00106434       0x64
+ .text.spi_nand_flash_block_erase
+                0x00106434       0x64 drivers/mtd/nand/libnand.o
+                0x00106434                spi_nand_flash_block_erase
+
+.text.spi_nand_rda_cmdfunc
+                0x00106498      0x1ec
+ .text.spi_nand_rda_cmdfunc
+                0x00106498      0x1ec drivers/mtd/nand/libnand.o
+
+.text.rda_spi_nand_init
+                0x00106684      0x20c
+ .text.rda_spi_nand_init
+                0x00106684      0x20c drivers/mtd/nand/libnand.o
+                0x00106684                rda_spi_nand_init
+
+.text.board_nand_init
+                0x00106890       0x68
+ .text.board_nand_init
+                0x00106890       0x68 drivers/mtd/nand/libnand.o
+                0x00106890                board_nand_init
+
+.text.cyg_crc16
+                0x001068f8       0x28
+ .text.cyg_crc16
+                0x001068f8       0x28 lib/libgeneric.o
+                0x001068f8                cyg_crc16
+
+.text.crc32_no_comp
+                0x00106920       0x90
+ .text.crc32_no_comp
+                0x00106920       0x90 lib/libgeneric.o
+                0x00106920                crc32_no_comp
+
+.text.crc32     0x001069b0        0xc
+ .text.crc32    0x001069b0        0xc lib/libgeneric.o
+                0x001069b0                crc32
+
+.text.crc32_wd  0x001069bc        0x4
+ .text.crc32_wd
+                0x001069bc        0x4 lib/libgeneric.o
+                0x001069bc                crc32_wd
+
+.text.__div64_32
+                0x001069c0       0x9a
+ .text.__div64_32
+                0x001069c0       0x9a lib/libgeneric.o
+                0x001069c0                __div64_32
+
+.text.strnlen   0x00106a5a       0x16
+ .text.strnlen  0x00106a5a       0x16 lib/libgeneric.o
+                0x00106a5a                strnlen
+
+.text.memset    0x00106a70       0x42
+ .text.memset   0x00106a70       0x42 lib/libgeneric.o
+                0x00106a70                memset
+
+.text.memcpy    0x00106ab2       0x42
+ .text.memcpy   0x00106ab2       0x42 lib/libgeneric.o
+                0x00106ab2                memcpy
+
+.text.memmove   0x00106af4       0x3c
+ .text.memmove  0x00106af4       0x3c lib/libgeneric.o
+                0x00106af4                memmove
+
+.text.memcmp    0x00106b30       0x1a
+ .text.memcmp   0x00106b30       0x1a lib/libgeneric.o
+                0x00106b30                memcmp
+
+.text.udelay    0x00106b4c       0x20
+ .text.udelay   0x00106b4c       0x20 lib/libgeneric.o
+                0x00106b4c                udelay
+
+.text.mdelay    0x00106b6c       0x16
+ .text.mdelay   0x00106b6c       0x16 lib/libgeneric.o
+                0x00106b6c                mdelay
+
+.text.put_dec   0x00106b84      0x160
+ .text.put_dec  0x00106b84      0x160 lib/libgeneric.o
+
+.text.string.isra.0
+                0x00106ce4       0x5c
+ .text.string.isra.0
+                0x00106ce4       0x5c lib/libgeneric.o
+
+.text.number.isra.1
+                0x00106d40      0x1b8
+ .text.number.isra.1
+                0x00106d40      0x1b8 lib/libgeneric.o
+
+.text.vsnprintf_internal.isra.3
+                0x00106ef8      0x2ec
+ .text.vsnprintf_internal.isra.3
+                0x00106ef8      0x2ec lib/libgeneric.o
+
+.text.vsprintf  0x001071e4        0x4
+ .text.vsprintf
+                0x001071e4        0x4 lib/libgeneric.o
+                0x001071e4                vsprintf
+
+.text.sprintf   0x001071e8       0x18
+ .text.sprintf  0x001071e8       0x18 lib/libgeneric.o
+                0x001071e8                sprintf
+
+.text.raise     0x00107200       0x14
+ .text.raise    0x00107200       0x14 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+                0x00107200                raise
+
+.text.__aeabi_unwind_cpp_pr0
+                0x00107214        0x2
+ .text.__aeabi_unwind_cpp_pr0
+                0x00107214        0x2 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+                0x00107214                __aeabi_unwind_cpp_pr0
+                0x00107218                . = ALIGN (0x4)
+
+.rodata         0x00107218     0x260e
+ *(SORT(.rodata*))
+ .rodata        0x00107218       0xf4 board/rda/rda8810/librda8810.o
+ .rodata.CSWTCH.13
+                0x0010730c       0x20 common/libcommon.o
+ .rodata.crc_table
+                0x0010732c      0x400 lib/libgeneric.o
+ .rodata.dmc_reg_cfg
+                0x0010772c      0x210 board/rda/rda8810/librda8810.o
+ .rodata.ext_csd_bits.3510
+                0x0010793c        0xc drivers/mmc/libmmc.o
+ .rodata.ext_to_hostcaps.3511
+                0x00107948        0xc drivers/mmc/libmmc.o
+ .rodata.fbase  0x00107954       0x10 drivers/mmc/libmmc.o
+ .rodata.mmc_manuf_ids
+                0x00107964       0x40 drivers/mmc/libmmc.o
+ .rodata.multipliers
+                0x001079a4       0x40 drivers/mmc/libmmc.o
+ .rodata.rda_nand_cld_div_tbl
+                0x001079e4       0x40 drivers/mtd/nand/libnand.o
+ .rodata.widths.3512
+                0x00107a24        0xc drivers/mmc/libmmc.o
+ .rodata.crc16_tab
+                0x00107a30      0x200 lib/libgeneric.o
+ .rodata.g_reg_to_save
+                0x00107c30       0x16 board/rda/rda8810/librda8810.o
+                0x00107c30                g_reg_to_save
+ .rodata.pll_patch_reg_base
+                0x00107c46        0x8 board/rda/rda8810/librda8810.o
+ .rodata        0x00107c4e       0x11 lib/libgeneric.o
+ .rodata.__func__.3021
+                0x00107c5f       0x16 arch/arm/cpu/armv7/libarmv7.o
+ .rodata._ctype
+                0x00107c75      0x100 lib/libgeneric.o
+                0x00107c75                _ctype
+ .rodata.clk_div_map
+                0x00107d75       0x20 drivers/mtd/nand/libnand.o
+ .rodata.emmc_mclk_adj_inv
+                0x00107d95       0x20 drivers/mmc/libmmc.o
+ .rodata.keyindex_map
+                0x00107db5       0x10 arch/arm/cpu/armv7/rda/librda.o
+ .rodata.str1.1
+                0x00107dc5       0x65 arch/arm/cpu/armv7/libarmv7.o
+ .rodata.str1.1
+                0x00107e2a      0x32a arch/arm/cpu/armv7/rda/librda.o
+                                0x33c (size before relaxing)
+ .rodata.str1.1
+                0x00108154      0x27b board/rda/rda8810/librda8810.o
+                                0x284 (size before relaxing)
+ .rodata.str1.1
+                0x001083cf      0x637 common/libcommon.o
+                                0x65d (size before relaxing)
+ .rodata.str1.1
+                0x00108a06      0x4ce drivers/mmc/libmmc.o
+                                0x4d4 (size before relaxing)
+ .rodata.str1.1
+                0x00108ed4      0x907 drivers/mtd/nand/libnand.o
+                                0x949 (size before relaxing)
+ .rodata.str1.1
+                0x001097db       0x30 lib/libgeneric.o
+ .rodata.str1.1
+                0x0010980b       0x1b /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+
+.ARM.exidx      0x00109828       0x28
+ .ARM.exidx     0x00109828       0x10 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .ARM.exidx     0x00109838        0x8 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x00109840       0x10 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+                                  0x8 (size before relaxing)
+
+.rel.dyn        0x00109850        0x0
+ .rel.iplt      0x00000000        0x0 arch/arm/cpu/armv7/start.o
+                0x00109850                . = ALIGN (0x4)
+
+.data           0x00109850       0x98
+ *(.data)
+ .data          0x00109850       0x98 arch/arm/cpu/armv7/rda/librda.o
+
+.igot.plt       0x001098e8        0x0
+ .igot.plt      0x00000000        0x0 arch/arm/cpu/armv7/start.o
+
+.data.hwp_ispi  0x001098e8        0x4
+ .data.hwp_ispi
+                0x001098e8        0x4 arch/arm/cpu/armv7/rda/librda.o
+
+.data.clock_default_config
+                0x001098ec       0xbc
+ .data.clock_default_config
+                0x001098ec       0xbc board/rda/rda8810/librda8810.o
+
+.data.pll_freq_table
+                0x001099a8      0x168
+ .data.pll_freq_table
+                0x001099a8      0x168 board/rda/rda8810/librda8810.o
+
+.data.g_debug_ddr3
+                0x00109b10        0x1
+ .data.g_debug_ddr3
+                0x00109b10        0x1 board/rda/rda8810/librda8810.o
+                0x00109b10                g_debug_ddr3
+
+.data.cur_dev_num
+                0x00109b14        0x4
+ .data.cur_dev_num
+                0x00109b14        0x4 drivers/mmc/libmmc.o
+
+.data.rda_nand_oob_64
+                0x00109b18      0x248
+ .data.rda_nand_oob_64
+                0x00109b18      0x248 drivers/mtd/nand/libnand.o
+
+.data.rda_nand_oob_512
+                0x00109d60      0x248
+ .data.rda_nand_oob_512
+                0x00109d60      0x248 drivers/mtd/nand/libnand.o
+
+.data.rda_nand_oob_256
+                0x00109fa8      0x248
+ .data.rda_nand_oob_256
+                0x00109fa8      0x248 drivers/mtd/nand/libnand.o
+
+.data.rda_nand_oob_128
+                0x0010a1f0      0x248
+ .data.rda_nand_oob_128
+                0x0010a1f0      0x248 drivers/mtd/nand/libnand.o
+
+.data.spi_nand_oob_64
+                0x0010a438      0x248
+ .data.spi_nand_oob_64
+                0x0010a438      0x248 drivers/mtd/nand/libnand.o
+
+.data.spi_bbt_main_descr
+                0x0010a680       0x24
+ .data.spi_bbt_main_descr
+                0x0010a680       0x24 drivers/mtd/nand/libnand.o
+
+.data.spi_nand_oob_128
+                0x0010a6a4      0x248
+ .data.spi_nand_oob_128
+                0x0010a6a4      0x248 drivers/mtd/nand/libnand.o
+
+.data.spi_bbt_mirror_descr
+                0x0010a8ec       0x24
+ .data.spi_bbt_mirror_descr
+                0x0010a8ec       0x24 drivers/mtd/nand/libnand.o
+
+.data.bbt_pattern
+                0x0010a910        0x4
+ .data.bbt_pattern
+                0x0010a910        0x4 drivers/mtd/nand/libnand.o
+
+.data.mirror_pattern
+                0x0010a914        0x4
+ .data.mirror_pattern
+                0x0010a914        0x4 drivers/mtd/nand/libnand.o
+                0x0010a918                . = ALIGN (0x4)
+                0x0010a918                . = .
+                0x0010a918                . = ALIGN (0x4)
+                0x0010a918                __image_copy_end = .
+                0x0010a918                _end = .
+                0x0010bff0                . = (((__start + 0xc000) - 0x10) - 0x100)
+                0x0010bff0                . = ALIGN (0x4)
+
+.ddrcal         0x0010bff0       0x10
+                0x0010bff0                __ddrcal_start = .
+                0x0010c000                . = (__ddrcal_start + 0x10)
+ *fill*         0x0010bff0       0x10 00
+                0x0010c000                __ddrcal_end = .
+                0x0010c000                . = .
+                0x0010c000                . = ALIGN (0x4)
+
+.bss            0x0010c000      0xad8
+                0x0010c000                . = ALIGN (0x4)
+                0x0010c000                __bss_start = .
+ *(.bss*)
+ .bss.g_halModuleIfcChannelOwner
+                0x0010c000       0x1c arch/arm/cpu/armv7/rda/librda.o
+                0x0010c000                g_halModuleIfcChannelOwner
+ .bss.usb_in_use
+                0x0010c01c        0x4 board/rda/rda8810/librda8810.o
+ .bss.spl_text_start_addr
+                0x0010c020        0x4 board/rda/rda8810/librda8810.o
+ .bss.g_clock_config
+                0x0010c024        0x4 board/rda/rda8810/librda8810.o
+ .bss.rda2_result
+                0x0010c028        0x8 board/rda/rda8810/librda8810.o
+ .bss.ddr_cal_val_start_addr
+                0x0010c030        0x4 board/rda/rda8810/librda8810.o
+ .bss.pll_patch_multi2
+                0x0010c034        0x4 board/rda/rda8810/librda8810.o
+ .bss.g_reg_cnt
+                0x0010c038        0x2 board/rda/rda8810/librda8810.o
+                0x0010c038                g_reg_cnt
+ *fill*         0x0010c03a        0x2 00
+ .bss.stdio_devices
+                0x0010c03c        0xc common/libcommon.o
+                0x0010c03c                stdio_devices
+ .bss.xyz       0x0010c048      0x43c common/libcommon.o
+ .bss.boot_mmc  0x0010c484        0x4 drivers/mmc/libmmc.o
+ .bss.mmc_devices
+                0x0010c488        0x8 drivers/mmc/libmmc.o
+ .bss.mmc_host_dev
+                0x0010c490       0x18 drivers/mmc/libmmc.o
+                0x0010c490                mmc_host_dev
+ .bss.mmc_device_glob
+                0x0010c4a8      0x2e0 drivers/mmc/libmmc.o
+                0x0010c4a8                mmc_device_glob
+ .bss.rda_ddr_mode
+                0x0010c788        0x4 drivers/mmc/libmmc.o
+ .bss.oob.3892  0x0010c78c       0x20 drivers/mtd/nand/libnand.o
+ *fill*         0x0010c7ac        0x4 00
+ .bss.mtd       0x0010c7b0       0xa8 drivers/mtd/nand/libnand.o
+ .bss.nand_chip
+                0x0010c858      0x130 drivers/mtd/nand/libnand.o
+ .bss.rda_nand_info.4530
+                0x0010c988       0xa4 drivers/mtd/nand/libnand.o
+ .bss.spi_nand_flash_quad_enable
+                0x0010ca2c        0x1 drivers/mtd/nand/libnand.o
+ *fill*         0x0010ca2d        0x3 00
+ .bss.rda_nand_info.4588
+                0x0010ca30       0xa4 drivers/mtd/nand/libnand.o
+ .bss.flash_intf_spi
+                0x0010cad4        0x4 drivers/mtd/nand/libnand.o
+                0x0010cad8                . = ALIGN (0x4)
+                0x0010cad8                __bss_end__ = .
+                0x00000001                ASSERT ((ABSOLUTE (__bss_end__) < 0x10fe00), too big data in spl, don't exceed intrenal ram)
+Address of section .text set to 0x100100
+LOAD arch/arm/cpu/armv7/start.o
+START GROUP
+LOAD arch/arm/cpu/armv7/libarmv7.o
+LOAD arch/arm/cpu/armv7/rda/librda.o
+LOAD arch/arm/lib/libarm.o
+LOAD board/rda/common/librda.o
+LOAD board/rda/rda8810/librda8810.o
+LOAD common/libcommon.o
+LOAD drivers/mmc/libmmc.o
+LOAD drivers/mtd/nand/libnand.o
+LOAD drivers/serial/libserial.o
+LOAD lib/libgeneric.o
+END GROUP
+LOAD /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+LOAD /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a
+OUTPUT(u-boot-spl elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x21 arch/arm/cpu/armv7/start.o
+ .ARM.attributes
+                0x00000021       0x2f arch/arm/cpu/armv7/libarmv7.o
+ .ARM.attributes
+                0x00000050       0x2f arch/arm/cpu/armv7/rda/librda.o
+ .ARM.attributes
+                0x0000007f       0x2f board/rda/rda8810/librda8810.o
+ .ARM.attributes
+                0x000000ae       0x2f common/libcommon.o
+ .ARM.attributes
+                0x000000dd       0x2f drivers/mmc/libmmc.o
+ .ARM.attributes
+                0x0000010c       0x2f drivers/mtd/nand/libnand.o
+ .ARM.attributes
+                0x0000013b       0x2f lib/libgeneric.o
+ .ARM.attributes
+                0x0000016a       0x2f /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+ .ARM.attributes
+                0x00000199       0x23 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000001bc       0x23 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x000001df       0x23 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_lshrdi3.o)
+ .ARM.attributes
+                0x00000202       0x23 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .ARM.attributes
+                0x00000225       0x23 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000248       0x23 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x0000026b       0x35 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x000002a0       0x35 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x000002d5       0x35 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+
+.comment        0x00000000       0x64
+ .comment       0x00000000       0x64 arch/arm/cpu/armv7/libarmv7.o
+                                0x12f (size before relaxing)
+ .comment       0x00000000      0x3f2 arch/arm/cpu/armv7/rda/librda.o
+ .comment       0x00000000      0x12f board/rda/rda8810/librda8810.o
+ .comment       0x00000000      0x25e common/libcommon.o
+ .comment       0x00000000      0x12f drivers/mmc/libmmc.o
+ .comment       0x00000000      0x2c3 drivers/mtd/nand/libnand.o
+ .comment       0x00000000      0x2c3 lib/libgeneric.o
+ .comment       0x00000000       0x65 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 arch/arm/cpu/armv7/libarmv7.o
+ .note.GNU-stack
+                0x00000000        0x0 arch/arm/cpu/armv7/rda/librda.o
+ .note.GNU-stack
+                0x00000000        0x0 board/rda/rda8810/librda8810.o
+ .note.GNU-stack
+                0x00000000        0x0 common/libcommon.o
+ .note.GNU-stack
+                0x00000000        0x0 drivers/mmc/libmmc.o
+ .note.GNU-stack
+                0x00000000        0x0 drivers/mtd/nand/libnand.o
+ .note.GNU-stack
+                0x00000000        0x0 lib/libgeneric.o
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_lshrdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_ashldi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_aeabi_uldivmod.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+
+.debug_line     0x00000000     0x8255
+ .debug_line    0x00000000       0x9a arch/arm/cpu/armv7/start.o
+ .debug_line    0x0000009a      0x423 arch/arm/cpu/armv7/libarmv7.o
+ .debug_line    0x000004bd     0x15cc arch/arm/cpu/armv7/rda/librda.o
+ .debug_line    0x00001a89      0x87e board/rda/rda8810/librda8810.o
+ .debug_line    0x00002307     0x162d common/libcommon.o
+ .debug_line    0x00003934     0x1139 drivers/mmc/libmmc.o
+ .debug_line    0x00004a6d     0x28a5 drivers/mtd/nand/libnand.o
+ .debug_line    0x00007312      0xea2 lib/libgeneric.o
+ .debug_line    0x000081b4       0xa1 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+
+.debug_info     0x00000000    0x1eded
+ .debug_info    0x00000000       0x72 arch/arm/cpu/armv7/start.o
+ .debug_info    0x00000072      0xb3f arch/arm/cpu/armv7/libarmv7.o
+ .debug_info    0x00000bb1     0x4ed8 arch/arm/cpu/armv7/rda/librda.o
+ .debug_info    0x00005a89     0x2598 board/rda/rda8810/librda8810.o
+ .debug_info    0x00008021     0x4392 common/libcommon.o
+ .debug_info    0x0000c3b3     0x506c drivers/mmc/libmmc.o
+ .debug_info    0x0001141f     0xbc5a drivers/mtd/nand/libnand.o
+ .debug_info    0x0001d079     0x1c74 lib/libgeneric.o
+ .debug_info    0x0001eced      0x100 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+
+.debug_abbrev   0x00000000     0x5862
+ .debug_abbrev  0x00000000       0x14 arch/arm/cpu/armv7/start.o
+ .debug_abbrev  0x00000014      0x3ff arch/arm/cpu/armv7/libarmv7.o
+ .debug_abbrev  0x00000413     0x13cc arch/arm/cpu/armv7/rda/librda.o
+ .debug_abbrev  0x000017df      0x61e board/rda/rda8810/librda8810.o
+ .debug_abbrev  0x00001dfd     0x105a common/libcommon.o
+ .debug_abbrev  0x00002e57      0xcb3 drivers/mmc/libmmc.o
+ .debug_abbrev  0x00003b0a     0x1437 drivers/mtd/nand/libnand.o
+ .debug_abbrev  0x00004f41      0x88f lib/libgeneric.o
+ .debug_abbrev  0x000057d0       0x92 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+
+.debug_aranges  0x00000000     0x10f0
+ .debug_aranges
+                0x00000000       0x20 arch/arm/cpu/armv7/start.o
+ .debug_aranges
+                0x00000020       0xe8 arch/arm/cpu/armv7/libarmv7.o
+ .debug_aranges
+                0x00000108      0x348 arch/arm/cpu/armv7/rda/librda.o
+ .debug_aranges
+                0x00000450       0xd8 board/rda/rda8810/librda8810.o
+ .debug_aranges
+                0x00000528      0x318 common/libcommon.o
+ .debug_aranges
+                0x00000840      0x1d8 drivers/mmc/libmmc.o
+ .debug_aranges
+                0x00000a18      0x4a0 drivers/mtd/nand/libnand.o
+ .debug_aranges
+                0x00000eb8      0x208 lib/libgeneric.o
+ .debug_aranges
+                0x000010c0       0x30 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+
+.debug_frame    0x00000000     0x2d60
+ .debug_frame   0x00000000      0x1e8 arch/arm/cpu/armv7/libarmv7.o
+ .debug_frame   0x000001e8      0x694 arch/arm/cpu/armv7/rda/librda.o
+ .debug_frame   0x0000087c      0x230 board/rda/rda8810/librda8810.o
+ .debug_frame   0x00000aac      0x808 common/libcommon.o
+ .debug_frame   0x000012b4      0x52c drivers/mmc/libmmc.o
+ .debug_frame   0x000017e0      0xed0 drivers/mtd/nand/libnand.o
+ .debug_frame   0x000026b0      0x564 lib/libgeneric.o
+ .debug_frame   0x00002c14       0x48 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+ .debug_frame   0x00002c5c       0x20 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00002c7c       0x20 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divsi3.o)
+ .debug_frame   0x00002c9c       0x54 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(bpabi.o)
+ .debug_frame   0x00002cf0       0x38 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_divdi3.o)
+ .debug_frame   0x00002d28       0x38 /xspace/OpenSource/GitHubLinux/OrangePiRDA/toolchain/bin/../lib/gcc/arm-linux-gnueabi/4.6.3/libgcc.a(_udivdi3.o)
+
+.debug_str      0x00000000     0x68c9
+ .debug_str     0x00000000      0x435 arch/arm/cpu/armv7/libarmv7.o
+                                0x75b (size before relaxing)
+ .debug_str     0x00000435     0x1865 arch/arm/cpu/armv7/rda/librda.o
+                               0x33d4 (size before relaxing)
+ .debug_str     0x00001c9a      0xb46 board/rda/rda8810/librda8810.o
+                               0x1a7b (size before relaxing)
+ .debug_str     0x000027e0     0x1857 common/libcommon.o
+                               0x2739 (size before relaxing)
+ .debug_str     0x00004037      0xb11 drivers/mmc/libmmc.o
+                               0x1ea3 (size before relaxing)
+ .debug_str     0x00004b48     0x1a35 drivers/mtd/nand/libnand.o
+                               0x4bff (size before relaxing)
+ .debug_str     0x0000657d      0x2c5 lib/libgeneric.o
+                                0xb0f (size before relaxing)
+ .debug_str     0x00006842       0x87 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+                                0x189 (size before relaxing)
+
+.debug_loc      0x00000000    0x12a4c
+ .debug_loc     0x00000000      0x6b0 arch/arm/cpu/armv7/libarmv7.o
+ .debug_loc     0x000006b0     0x134f arch/arm/cpu/armv7/rda/librda.o
+ .debug_loc     0x000019ff     0x1356 board/rda/rda8810/librda8810.o
+ .debug_loc     0x00002d55     0x365d common/libcommon.o
+ .debug_loc     0x000063b2     0x2aca drivers/mmc/libmmc.o
+ .debug_loc     0x00008e7c     0x7634 drivers/mtd/nand/libnand.o
+ .debug_loc     0x000104b0     0x255e lib/libgeneric.o
+ .debug_loc     0x00012a0e       0x3e /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o
+
+.debug_ranges   0x00000000     0x21d0
+ .debug_ranges  0x00000000      0x160 arch/arm/cpu/armv7/libarmv7.o
+ .debug_ranges  0x00000160      0x380 arch/arm/cpu/armv7/rda/librda.o
+ .debug_ranges  0x000004e0      0x278 board/rda/rda8810/librda8810.o
+ .debug_ranges  0x00000758      0x488 common/libcommon.o
+ .debug_ranges  0x00000be0      0xa88 drivers/mmc/libmmc.o
+ .debug_ranges  0x00001668      0x950 drivers/mtd/nand/libnand.o
+ .debug_ranges  0x00001fb8      0x1f8 lib/libgeneric.o
+ .debug_ranges  0x000021b0       0x20 /xspace/OpenSource/GitHubLinux/OrangePiRDA/uboot/spl/arch/arm/lib/eabi_compat.o

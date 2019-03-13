@@ -1,0 +1,745 @@
+
+#######################################
+## PART A
+##-------------------------------------
+## 芯片描述信息
+#######################################
+
+
+#=====================================
+##  1 ##
+######## 芯片描述信息 ########
+
+## ASIC type: gallite/8808/8809/8810
+CT_ASIC         ?= 8810
+
+## Chip package for different sram size:
+## CT1128: 0Mbit sram
+## CT1129/CT8852D/CT8853D/CT8852M/CT8853M/CT8852A/CT8853A: 16Mbit sram
+## CT1130/CT8852B/CT8853B/RDA8810: 32Mbit sram
+## CT1131/CT8852C/CT8853C/CT8851C: 64Mbit sram
+CT_CHIP_PKG 	?= RDA8810
+
+## Chip die type:
+## 8805/8806 (if CT_ASIC is gallite)
+## or set to null (otherwise)
+CT_CHIP_DIE 	?= 
+
+CHARGERCURRENT_ADJUST_DYNAMIC ?= 1
+
+#######################################
+## PART B
+##-------------------------------------
+## 驱动描述信息
+#######################################
+
+
+## 注意1：除非特别说明，module的名字必须和edrv目录下面的目录名保持一致，
+## 否则编译的时候找不到对应的目标。如果edrv下面没有相关的目录，
+## 说明暂时没有这个设备的驱动，需要驱动工程师自己去开发一个新的驱动，
+## 驱动程序可以根据设备的SPEC参考已有的驱动进行修改。
+
+
+#=====================================
+##  2 ##
+######## 触屏驱动 ########
+
+## 芯片集成，需要则设置为rda1203_gallite，否则设置为空
+TSD_MODEL       ?=
+
+
+#=====================================
+##  3 ##
+######## FM驱动 ########
+
+## rda5802e_gallite (如果使用8805/8806芯片集成的FM模块)
+## rda5888e
+## (如果使用rda5888s，也需要配成rda5888e)
+## rda5888h
+## rda5876
+## rda5802na
+FM_MODEL        ?= 
+
+## 如果使用I2S，则设置为1；
+## 如果使用LINE-IN，则设置为0
+FM_USING_I2S    ?= 0
+
+## FM使用的32K时钟管脚: 1/0
+## 1: 32K_CLK pin
+## 0: CLK_OUT pin
+FM_USE_32K_CLK_PIN ?= 0
+
+## FM使用外置拉杆天线（不需要插入耳机收听）
+#MMI_EXPORT_FLAG += FM_RADIO_WITH_EXTERNAL_ANT
+
+
+#=====================================
+##  4 ##
+######## FLASH驱动 ########
+
+## ADMUX MCP
+##
+## Normal MCP
+##
+## SPI Flash (RAM is packaged inside baseband chip)
+##1 <General> flsh_spi32m     32
+##  <General> flsh_spi32x2m   64
+##  <General> flsh_spi64m     64
+##  <General> flsh_spi64x2m   128
+##  <General> flsh_spi128m    128
+##
+## Modem RAM
+##1 <General> modem_ram
+FLSH_MODEL      ?= modem_ram
+
+## Flash model interface: parallel/spi
+FLSH_IF         ?= 
+
+## EBC CLK cfg:__52MHz__/__78MHz__/__104MHz__/__156MHz__
+SYS_MEMD_EBC_CLK ?= __104MHz__
+
+## SPI Flash SPI CLK cfg:__52MHz__/__78MHz__/__104MHz__/__156MHz__
+ifeq "$(strip ${FLSH_IF})" "spi"
+SYS_MEMD_FLSH_SPI_CLK ?= __78MHz__
+endif # (${FLSH_IF},)
+
+## Ram is ADMUX or not
+ifeq "$(strip ${CT_ASIC_CFG})" "chip"
+TARGET_EXPORT_FLAG    += MEMD_RAM_IS_ADMUX
+## Flash is ADMUX or not 
+#TARGET_EXPORT_FLAG    += MEMD_FLASH_IS_ADMUX
+## Ram support burst mode or not
+TARGET_EXPORT_FLAG    += MEMD_RAM_IS_BURST
+## Flash support burst mode or not
+#TARGET_EXPORT_FLAG    += MEMD_FLASH_IS_BURST
+else
+#TARGET_EXPORT_FLAG    += MEMD_RAM_PAGE_MODE
+TARGET_EXPORT_FLAG    += FPGA_PSRAM_MICRON
+endif
+
+#=====================================
+##  5 ##
+######## LCD驱动 ########
+
+##	1 QVGA	240*320
+##	hx8347 lgdp4532 st7781 ssd1297 spfd5408b
+##	hx8367 s6d1121 st7787 ili9320
+##	otm3225 ili9325 ili9328 ili9340
+##	s6d04h0a01(无id寄存器)
+##	2 QCIF	176*220
+##	hx8340b kc20 r61503v otm2201a
+##	ili9225 lgb4525b r61503vr otm2201h
+##	ili9225b ili9225br s6d0164 dc2200
+##	3 QQVGA	128*160
+##	ili9163 s6b33bf st7669v s6d0144
+##	st7735 hx8345a fd54124bv
+## （支持自适应选择，可以同时设置多个驱动）
+
+## MainLCD
+LCD_MODEL       ?=  
+
+## LCD interface: gouda/slcd
+LCD_IF          ?= 
+
+## GOUDA can support serial LCD starting from 8808
+ifeq "$(strip ${LCD_IF})" "gouda"
+USE_SPI_LCD     ?= 0
+endif
+
+## Define LCD resolution:
+## LCDSIZE_128_160/LCDSIZE_176_220/LCDSIZE_240_320
+GLOBAL_EXPORT_FLAG += LCDSIZE_128_160
+
+## 将QQVGA放大到QCIF
+#GLOBAL_EXPORT_FLAG    += LCD_SCALE_128_160_TO_176_220
+
+## SubLCD
+SUBLCD_MODEL	?= 
+
+ifneq "$(strip ${SUBLCD_MODEL})" ""
+## SubLCD interface: gouda/slcd
+SUBLCD_IF       ?= gouda
+
+## GOUDA can support serial LCD starting from 8808
+ifeq "$(strip ${SUBLCD_IF})" "gouda"
+USE_SPI_SUBLCD  ?= 0
+endif
+
+## Define SUB LCD resolution
+## SUBLCDSIZE_128_128/SUBLCDSIZE_96_64/SUBLCDSIZE_64_96
+GLOBAL_EXPORT_FLAG += SUBLCDSIZE_128_128
+endif # SUBLCD_MODEL
+
+## Whether to enable charge pump to avoid screen flicker
+## (If enabled, AUD_SPK_LINE_CLASS_MODE must be set to class_k)
+LCD_BACKLIGHT_CHARGE_PUMP ?= 0
+
+
+#=====================================
+##  6 ##
+######## CAMERA驱动 ########
+
+##1 OmniVision OV7660 VGA
+##  OmniVision OV7670 VGA
+##  OmniVision OV7675 VGA
+##2 GalaxyCore GC0306 VGA
+##  GalaxyCore GC0307 VGA
+##  GalaxyCore GC0309 VGA
+##3 BYD BYD3503 VGA
+##  BYD BYD3603 VGA
+##  BYD BYD3703 VGA
+##4 HYNIX YACBAA0SDDAS VGA
+##  HYNIX HYA10S VGA
+##5 SET SIV100B VGA
+##6 Superpix SP80818 VGA  
+## （支持自适应选择，可以同时设置多个驱动）
+CAMERA_MODEL    ?= 
+
+## Camera model interface: parallel/spi
+## 对于spi接口，8805/8806只支持pas6175与sp0828，
+##     而且必须与串口LCD配合使用；
+##     后续芯片(8808及以后)则无此限制。
+## 对于gc6113串口摄像头，需要使用并口模拟串口时，
+##     接口需配置成parallel，而且不能与串口LCD配合使用;
+##     8805/8806只支持并口模拟串口的方式；
+##     后续芯片(8808及以后)则无此限制。
+CAMERA_IF       ?= 
+
+## 支持双camera
+#TARGET_EXPORT_FLAG += SUPPORT_DUAL_CAMERA
+
+## 是否支持大照片拍摄(要求有足够内存)
+GLOBAL_EXPORT_FLAG += MEM_3216_CAMERA_LARGE_MODE
+
+## 使用8w sensor时，必须打开；
+## 如果ULC（3216）项目中使用30w sensor，建议打开;
+## 注意不能和_CAM_SPECIAL_GC6113_同时定义
+TARGET_EXPORT_FLAG += _CAM_SMALL_MEM_
+
+
+#=====================================
+##  7 ##
+######## 蓝牙驱动 ########
+
+## rda5870
+## rda5872
+## rda5875
+## rda5876 (如果使用rda5875y，也需要配置成rda5876)
+##（支持自适应选择，可以同时设置多个驱动）
+BT_MODEL        ?= 
+
+ifneq "$(strip ${BT_MODEL})" ""
+## 当不支持A2DP的时候需要定义这个宏
+#GLOBAL_EXPORT_FLAG += __BT_NO_A2DP_PROFILE__
+
+## Define BT crystal flag
+BT_SHARE_CRYSTAL ?= 1
+
+## 蓝牙使用的32K时钟管脚: 1/0
+## 1: 32K_CLK pin
+## 0: CLK_OUT pin
+BT_USE_32K_CLK_PIN ?= 0
+endif # (${BT_MODEL},)
+
+#TARGET_EXPORT_FLAG += __BT_PCM_OVER_UART__
+
+
+#=====================================
+##  8 ##
+######## 模拟电视驱动 ########
+
+## rda5888e (如果使用rda5888s，也需要配置成rda5888e)
+## rda5888h
+## rda5888he
+ATV_MODEL       ?= 
+
+## If 5888h or 5888he then USING I2S need set 0
+#TV_USING_I2S    ?= 0
+
+## 模拟电视使用的32K时钟管脚: 1/0
+## 1: 32K_CLK pin
+## 0: CLK_OUT pin
+TV_USE_32K_CLK_PIN ?= 0
+
+
+#=====================================
+##  9 ##
+######## T卡驱动 ########
+
+## Interface: sdmmc/spi
+MCD_IF          ?= 
+
+
+#=====================================
+## 10 ##
+######## 软I2C驱动 ########
+
+## 当配置了这项为i2c_gpio之后，会使用GPIO来软件模拟I2C接口;
+## 不使用软件模拟时设置为空
+I2C_MODEL       ?=
+
+
+#=====================================
+## 11 ##
+######## GSENSOR驱动 ########
+
+## mma7660fc
+## mma7660fc_gpio
+GSENSOR_MODEL   ?= 
+
+
+#=====================================
+## 12 ##
+######## SIM卡驱动 ########
+
+## 8805: rda1203_gallite(2卡驱动), threesimd（3卡驱动），fourdimd（4卡驱动）
+## 8806/8808: rda1203_gallite_CT1129
+DUALSIM_MODEL   ?= rda1203_gallite_CT1129
+
+## 支持的多卡的数量***
+NUMBER_OF_SIM   ?= 2
+
+## 支持多卡的卡序排列***
+USER_SIM_ORDER  ?= 1 2
+
+## 如果用了SIM switch开关，就打开此宏
+ifeq "$(strip ${CT_CHIP_DIE})" "8805"
+#TARGET_EXPORT_FLAG    += SIM_SWITCH_USED
+endif
+
+## Whether to support USIM
+USIM_SUPPORT ?= 1
+
+
+#=====================================
+## 13 ##
+######## 音频驱动 #########
+
+## MIC电路是否采用节省电容器的方案（是填1；否则填0）
+MIC_CAPLESS_MODE ?= 1
+
+## The usage of L&R speaker lines: both, left, right
+AUD_SPK_LINE_USAGE ?= both
+
+## Whether to enable speaker line L-R-double mode
+AUD_SPK_LINE_L_R_DOUBLE ?= 1
+
+## Whether to enable headphone charge pump mode
+## (If enabled, AUD_SPK_LINE_CLASS_MODE must be set to class_k)
+HEADPHONE_CHARGE_PUMP ?= 0
+
+## Select speaker class mode: class_ab, class_d, class_k
+## (If LCD_BACKLIGHT_CHARGE_PUMP or HEADPHONE_CHARGE_PUMP is
+## enabled, class_k must be selected)
+AUD_SPK_LINE_CLASS_MODE ?= class_d
+
+## Receiver uses one speaker line (using left line by default)
+#TARGET_EXPORT_FLAG    += RECV_USE_SPK_LINE
+
+## If using right line, the following macro should be added as well
+#TARGET_EXPORT_FLAG    += RECV_USE_SPK_LINE_R
+
+## Alleviate the "pop" sound on loud speaker for some external audio PAs
+#TARGET_EXPORT_FLAG    += AUD_SPK_ON_WITH_LCD
+
+# ABB headphone detection
+#TARGET_EXPORT_FLAG += ABB_HP_DETECT
+
+
+#=====================================
+## 14 ##
+######## 射频驱动 #########
+
+## pasw_rda6231
+## pasw_rda6625
+PA_MODEL        ?= pasw_rda6231
+
+## RF优化选项
+## 若XCV直接控制PA与SW的可以打开此宏，若TCO控制则必须关掉此宏（请先咨询FAE）
+TARGET_EXPORT_FLAG += INTERNAL_XCV_CONTROL_PASW
+TARGET_EXPORT_FLAG += __RF_RDAPASW_TWOBAND_AS_FOURBAND__
+
+## PA RAMP电容是否使用220pF: 1/0
+PA_VRAMP_220PF ?= 1
+
+
+#=====================================
+## 15 ##
+######## WIFI驱动 #########
+
+## rdawifi
+WIFI_MODEL      ?= 
+
+## WIFI使用的32K时钟管脚: 1/0
+## 1: 32K_CLK pin
+## 0: CLK_OUT pin
+WIFI_USE_32K_CLK_PIN ?= 0
+
+
+#=====================================
+## 16 ##
+######## 32K时钟配置 #########
+
+## 基带芯片是否使用外部晶体提供的32K时钟（XTAL32K_IN管脚）：1/0
+## （注意：8805/8806芯片不需要配置此选项）
+USE_EXT_XTAL_32K ?= 0
+
+
+#=====================================
+## 17 ##
+######## GPRS支持 ########
+
+## 1为支持GPRS，0为不支持
+GPRS_SUPPORT ?= 1
+EGPRS_SUPPORT ?= 1
+
+## 1为支持PPP，0为不支持
+PPP_SUPPORT ?= 1
+
+## 当运行camera/video player/video recorder等应用时不自动下载彩信内容，
+## 只下载彩信通知，用户可以之后手动下载彩信内容
+## 对于读写速度较慢的flash，需要定义
+#GLOBAL_EXPORT_FLAG += MANUAL_DOWNLOAD_MMS
+
+
+#=====================================
+## 18 ##
+######## 射频校准屏幕显示支持 ########
+
+## Screen display in RF calibration: 1/0
+## 如果不在这里设置，CES_DISPLAY会在platform/calib被默认设置为1;
+## 对于ULC项目可以将其设置为0，以节省flash空间
+CES_DISPLAY ?= 0
+
+
+#######################################
+## PART C
+##-------------------------------------
+## 应用描述信息
+#######################################
+
+
+#=====================================
+## 19 ##
+######## 资源包 ########
+
+## 选择application/target_res目录下的资源包；
+## 设置为空则选择系统默认的资源包
+CT_ERES ?= g021_441_3216
+
+
+#=====================================
+## 20 ##
+######## ULC选项 ########
+
+## 是否启用ULC: YES/NO (注意都是大写字母!)
+TARGET_MEM_ULC_3216 ?= YES
+
+
+#=====================================
+## 21 ##
+######## 空间压缩 ########
+
+## 是否启用压缩代码: yes/no
+CT_COMPRESS_CODE_SECTION ?= no
+
+## 是否启用字符串资源压缩
+MMI_EXPORT_FLAG += COMPRESS_OPTIMIZE_FLASH_SIZE
+MMI_EXPORT_FLAG += COMPRESS_USE_LZMA
+
+ifeq "$(strip ${CT_COMPRESS_CODE_SECTION})" "yes"
+## Compression state: 3232/3264/6464 or set to null
+COMPRESS_STATE ?= 
+## Compression strategy (please consult FAE):
+## 1/2 or set to null
+COMPRESS_STRATEGY ?= 
+
+#TARGET_EXPORT_FLAG += __CODE_DECOMPRESS_WITH_VOC__
+endif
+
+#=====================================
+## 22 ##
+######## USB支持类型 ########
+
+## umss_storage_flashmc表示支持FLASH和T卡U盘
+## umss_storage_mc 表示仅支持T卡U盘
+UCTLS_SERVICE   ?= umss_storage_flashmc
+
+
+#=====================================
+## 23 ##
+######## 多国语言设置 ########
+
+SUPPORT_MULTI_LANG_FRENCH			:= NO	#French
+SUPPORT_MULTI_LANG_ITALIAN			:= NO	#Italian
+SUPPORT_MULTI_LANG_VIETNAMESE		:= NO	#Vietnamese
+SUPPORT_MULTI_LANG_RUSSIAN			:= NO	#Russian
+SUPPORT_MULTI_LANG_ARABIC			:= NO	#Arabic
+SUPPORT_MULTI_LANG_THAI				:= NO	#Thai
+SUPPORT_MULTI_LANG_SM_CHINESE		:= YES	#SM Chinese,NOTE: can't work together with TR chinese
+SUPPORT_MULTI_LANG_TR_CHINESE		:= NO	#TR Chinese,NOTE: can't work together with SM chinese
+SUPPORT_MULTI_LANG_GERMAN			:= NO	#German
+SUPPORT_MULTI_LANG_SPANISH			:= NO	#Spanish
+SUPPORT_MULTI_LANG_PORTUGUESE		:= NO	#Portuguese
+SUPPORT_MULTI_LANG_PERSIAN			:= NO	#Persian
+SUPPORT_MULTI_LANG_URDU				:= NO	#Urdu
+SUPPORT_MULTI_LANG_TURKISH			:= NO	#Turkish
+SUPPORT_MULTI_LANG_INDONESIAN		:= NO	#Indonesian
+SUPPORT_MULTI_LANG_MALAY			:= NO	#Malay
+SUPPORT_MULTI_LANG_ZULU				:= NO	#Zulu
+SUPPORT_MULTI_LANG_XHOSA			:= NO	#Xshosa
+SUPPORT_MULTI_LANG_SWAHILI			:= NO	#Swahili
+SUPPORT_MULTI_LANG_CZECH			:= NO	#Czech
+SUPPORT_MULTI_LANG_POLISH			:= NO	#Polish
+SUPPORT_MULTI_LANG_HUNGARIAN		:= NO	#Hungarian
+SUPPORT_MULTI_LANG_NORWEGIAN		:= NO	#Norwegian
+SUPPORT_MULTI_LANG_SLOVAK			:= NO	#Slovak
+SUPPORT_MULTI_LANG_DUTCH			:= NO	#Dutch
+SUPPORT_MULTI_LANG_SWEDISH			:= NO	#Swedish
+SUPPORT_MULTI_LANG_CROATIAN			:= NO	#Croatian
+SUPPORT_MULTI_LANG_SLOVENIAN		:= NO	#Slovenian
+SUPPORT_MULTI_LANG_AFRIKAANS		:= NO	#Afrikaans
+SUPPORT_MULTI_LANG_LITHUANIAN		:= NO	#Lithuanian
+SUPPORT_MULTI_LANG_LATVIAN			:= NO	#Latvian
+SUPPORT_MULTI_LANG_ESTONIAN			:= NO	#Estonian
+SUPPORT_MULTI_LANG_MOLDOVAN			:= NO	#Moldovan
+SUPPORT_MULTI_LANG_ALBANIAN			:= NO	#Albanian 
+SUPPORT_MULTI_LANG_CA_FRENCH		:= NO	#Ca_French
+SUPPORT_MULTI_LANG_SA_SPANISH		:= NO	#Latin.Am.Spanish
+SUPPORT_MULTI_LANG_SA_PORTUGUESE	:= NO	#Brazil.Portuguese
+SUPPORT_MULTI_LANG_SESOTHO			:= NO	#Sesotho
+SUPPORT_MULTI_LANG_TAGALOG			:= NO	#Tagalog
+SUPPORT_MULTI_LANG_UK_ENGLISH		:= NO	#UK Eenglish
+SUPPORT_MULTI_LANG_YORUBA			:= NO	#Yoruba
+SUPPORT_MULTI_LANG_AZERBAIJANI		:= NO	#Azerbaijani
+SUPPORT_MULTI_LANG_CATALAN			:= NO	#Catalan
+SUPPORT_MULTI_LANG_ICELANDIC		:= NO	#Icelandic
+SUPPORT_MULTI_LANG_DANISH			:= NO	#Danish
+SUPPORT_MULTI_LANG_FINNISH			:= NO	#Finnish
+SUPPORT_MULTI_LANG_ROMANIAN			:= NO	#Romanian
+SUPPORT_MULTI_LANG_HAUSA			:= NO	#Hausa
+SUPPORT_MULTI_LANG_BULGARIAN		:= NO	#Bulgarian
+SUPPORT_MULTI_LANG_UKRAINIAN		:= NO	#Ukrainian
+SUPPORT_MULTI_LANG_MACEDONIAN		:= NO	#Macedonian
+SUPPORT_MULTI_LANG_SERBIAN			:= NO	#Serbian
+SUPPORT_MULTI_LANG_GREEK			:= NO	#Greek
+SUPPORT_MULTI_LANG_HEBREW			:= NO	#Hebrew
+SUPPORT_MULTI_LANG_UYGHUR			:= NO	#Uyghur
+
+#these languages support need open IndicLanguages macro
+SUPPORT_MULTI_LANG_INDIC_LANGUAGES 	:= NO
+SUPPORT_MULTI_LANG_HINDI          	:= NO	 #Hindi
+SUPPORT_MULTI_LANG_TELUGU         	:= NO    #Telugu
+SUPPORT_MULTI_LANG_PUNJABI        	:= NO    #Punjabi
+SUPPORT_MULTI_LANG_BENGALI        	:= NO    #Bengali
+SUPPORT_MULTI_LANG_MARATHI        	:= NO    #Marathi
+SUPPORT_MULTI_LANG_MYANMAR			:= NO    #Mayanmar
+SUPPORT_MULTI_LANG_TAMIL          	:= NO    #Tamil
+SUPPORT_MULTI_LANG_ASSAMESE			:= NO	 #Assamese
+SUPPORT_MULTI_LANG_ORIYA          	:= NO    #Malay
+SUPPORT_MULTI_LANG_KANNADA        	:= NO    #Malay
+SUPPORT_MULTI_LANG_MALAYALAM      	:= NO    #Malay
+
+#################################################################
+
+#=====================================
+## 24 ##
+######## 文件系统 ########
+
+## 当使用的FLASH为单BANKFLASH的时候，需要打开
+#TARGET_EXPORT_FLAG += USER_DATA_CACHE_SUPPORT
+#TARGET_EXPORT_FLAG += FACT_SETTING_CACHE_SUPPORT
+
+## 将文件系统REG区和sms区合并为CSW区，
+## 节省代码空间，客户无需修改,
+## 若存储的SMS数较多则需要注销此宏
+TARGET_EXPORT_FLAG += _REG_SMS_MERGE
+
+
+#=====================================
+## 25 ##
+######## 功能选项 ########
+
+## Video player功能: 1/0
+## 如果不在这里设置，VIDEO_PLAYER_SUPPORT会在后面被默认设置为1;
+## 对于ULC项目可以将其设置为0，取消video player功能以节省flash空间
+#VIDEO_PLAYER_SUPPORT ?= 0
+
+## sound recorder功能: 1/0
+SOUND_RECORDER_SUPPORT ?= 0
+
+## Video recorder功能: 1/0
+VIDEO_RECORDER_SUPPORT ?= 0
+
+ifeq "$(strip ${VIDEO_RECORDER_SUPPORT})" "1"
+##
+## VDOREC_MODE_QVGA: QVGA(320x240) recording
+## VDOREC_MODE_VGA: VGA(640x480) recording
+## If neither is declared, QQVGA(160x120) recording by default
+## Neither macro is recommended to declare unless on 8808 platform
+##
+#GLOBAL_EXPORT_FLAG += VDOREC_MODE_VGA
+
+##
+## VIDREC_FAST_RECORDING: 15 frames per second, only available for QVGA/QQVGA recording
+## If it is not declared, 10 fps for QVGA/QQVGA by default.
+##
+#GLOBAL_EXPORT_FLAG += VIDREC_FAST_RECORDING
+endif
+
+## 使用camera模拟2d sensor: 1/0
+ifneq "$(strip ${CAMERA_MODEL})" ""
+CAM_MD_SUPPORT ?= 0
+endif
+
+## 魔音功能: 1/0
+MAGIC_AE_SUPPORT ?= 0
+
+## RMVB播放解码支持: 1/0
+## 此功能需求的内存较大，总共约760KB
+MEDIA_RM_SUPPORT ?= 0
+
+## MIDI播放支持: 1/0
+MEDIA_MIDI_SUPPORT ?= 0
+
+## display a picture early when power on 
+#GLOBAL_EXPORT_FLAG += __DISPLAY_POWERON_LOGO__
+
+## 支持T卡热插拔
+#MMI_EXPORT_FLAG       += __TFLASH_MOUNT_DYNAMIC__
+
+## 这个宏开关，用来控制是否支持自动记录按键信息，
+## 通常用于记录出问题之前的按键信息，方便工程人员复现问题
+## 打开这个宏会额外占用大约9KByte的空间，可以根据实际情况
+## 考虑是否打开这个功能
+#MMI_EXPORT_FLAG += AUTO_TEST_KEYPRESS_RECORD_SUPPORT
+
+## 定义短消息和电话本的条目
+## PHONE_SMS_ENTRY_COUNT表征FLASH上多卡项目总计SMS容量，
+## 单卡数目为PHONE_SMS_ENTRY_COUNT/SIM_COUNT
+## SIM_SMS_ENTRY_COUNT表征SIM卡上最大SMS容量，请勿修改
+GLOBAL_EXPORT_FLAG += PHONE_SMS_ENTRY_COUNT=100
+GLOBAL_EXPORT_FLAG += SIM_SMS_ENTRY_COUNT=255
+GLOBAL_EXPORT_FLAG += PHONE_PHB_ENTRY_COUNT=50
+
+## 电话本选项
+#MMI_EXPORT_FLAG += __MMI_PHB_SLIM_OPTIONAL_FIELD__
+#MMI_EXPORT_FLAG += __PHB_CALLER_IMAGE_SAVE_PATH_ONLY__
+
+
+#######################################
+## PART D
+##-------------------------------------
+## 编译调试描述信息
+#######################################
+
+
+#=====================================
+## 26 ##
+######## 编译优化选项 ########
+
+## 编译代码空间优化
+CT_OPT ?= dbg_size
+
+## 编译时候遇到warnning不停止编译
+WITHOUT_WERROR ?= 1
+
+# Export board information to lod: yes/no
+EXPORT_BOARD_INFO ?= yes
+# User defined board information
+EXPORT_BOARD_FLAGS ?= PM_MODEL ATV_MODEL FM_MODEL
+
+
+#=====================================
+## 27 ##
+######## 调试选项 ########
+
+## 通过SPI调试射频寄存器参数
+TARGET_EXPORT_FLAG += SPI_REG_DEBUG
+
+## For FS debug ,open ASSERT in FS layer
+TARGET_EXPORT_FLAG += _FS_DEBUG
+
+## Profile
+## Enable this macro if profile is needed in any module
+TARGET_EXPORT_FLAG += HAL_PROFILE_ON_BUFFER
+## Individual modules
+TARGET_EXPORT_FLAG += SX_PROFILING
+TARGET_EXPORT_FLAG += PAL_PROFILING
+TARGET_EXPORT_FLAG += HAL_PROFILING
+TARGET_EXPORT_FLAG += STK_PROFILING
+TARGET_EXPORT_FLAG += AT_PROFILING
+#TARGET_EXPORT_FLAG += PMD_PROFILING
+#TARGET_EXPORT_FLAG += TSD_PROFILING
+#TARGET_EXPORT_FLAG += DUALSIMD_PROFILING
+
+## Trace
+## Disable this macro if trace is needed in any module
+#TARGET_EXPORT_FLAG += SXS_NO_PRINTF
+## Individual modules
+TARGET_EXPORT_FLAG += MMI_NO_TRACE
+#TARGET_EXPORT_FLAG += CSW_NO_TRACE
+TARGET_EXPORT_FLAG += MCI_NO_TRACE
+TARGET_EXPORT_FLAG += STACK_NO_PRINTF
+#TARGET_EXPORT_FLAG += HAL_NO_PRINTF
+#TARGET_EXPORT_FLAG += PAL_NO_TRACE
+TARGET_EXPORT_FLAG += VOIS_NO_PRINTF
+#TARGET_EXPORT_FLAG += EDRV_NO_TRACE
+TARGET_EXPORT_FLAG += CALIB_NO_PRINTF
+TARGET_EXPORT_FLAG += UCTLS_NO_PRINTF
+TARGET_EXPORT_FLAG += UMSS_NO_PRINTF
+TARGET_EXPORT_FLAG += ARS_NO_PRINTF
+TARGET_EXPORT_FLAG += RFD_NO_TRACE
+## Dump
+#TARGET_EXPORT_FLAG += SXS_NO_DUMP
+
+## 系统启动时，尽早打开trace
+#TARGET_EXPORT_FLAG += EARLY_TRACE_OPEN
+
+
+#######################################
+## PART E
+##-------------------------------------
+## 项目定制信息
+#######################################
+
+
+#=====================================
+## 28 ##
+######## 与资源包相关的设置 ######
+
+## 是否需要下面这些设置取决于CT_ERES指定的资源包
+
+## 日历
+#MMI_EXPORT_FLAG += CALENDAR_SUPPORT
+## 任务
+#MMI_EXPORT_FLAG += TODOLIST_SUPPORT
+## 工具箱
+#MMI_EXPORT_FLAG += ORGANIZER_SUPPORT
+
+## More ...
+
+
+
+#=====================================
+## 29 ##
+######## 项目特有功能 ######
+
+#GLOBAL_EXPORT_FLAG += PROJ_XXX
+#TARGET_EXPORT_FLAG  += lcd_line_8_low
+
+#GLOBAL_EXPORT_FLAG += __MMI_NEW_NVRAM_INTERFACE__
+
+# Support remote keypad simulation
+TARGET_EXPORT_FLAG += REMOTE_KEYPAD_SIMU
+
+GLOBAL_EXPORT_FLAG += XCV_USE_LNA
+
+#######################################
+## PART Z
+##-------------------------------------
+## 通用设置，请勿修改，并保证此部分在文件的最后
+#######################################
+
+include ${SOFT_WORKDIR}/target/target_common.def
+
