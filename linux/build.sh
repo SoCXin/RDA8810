@@ -36,7 +36,7 @@ function install_toolchain()
         mkdir -p $TOP_ROOT/toolchain
         mv $TOP_ROOT/.tmp_toolchain/arm-linux-eabi-master/* $TOP_ROOT/toolchain/
         sudo chmod 755 $TOP_ROOT/toolchain -R
-        rm -rf $TOP_ROOT/RDA8810/.tmp_toolchain
+        rm -rf $TOP_ROOT/.tmp_toolchain
         cd -
     fi
 }
