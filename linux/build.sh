@@ -34,7 +34,7 @@ function install_toolchain()
         curl -C - -o ./toolchain $toolchain
         unzip $TOP_ROOT/.tmp_toolchain/toolchain
         mkdir -p $TOP_ROOT/toolchain
-        mv $TOP_ROOT/.tmp_toolchain/arm-linux-eabi-master/* $TOP_ROOT/toolchain/
+        mv $TOP_ROOT/.tmp_toolchain/arm-linux-eabi-master/gcc-arm-linux/* $TOP_ROOT/toolchain/
         sudo chmod 755 $TOP_ROOT/toolchain -R
         rm -rf $TOP_ROOT/.tmp_toolchain
         cd -
@@ -43,11 +43,6 @@ function install_toolchain()
 
 git_configure
 install_toolchain
-
-whiptail --title "RDA8810 Build System" --msgbox \
- "`figlet RDA8810` Succeed to Create RDA8810 Build System!        Path:$TOP_ROOT" \
-             15 50 0
-clear
 
 root_check()
 {
@@ -61,18 +56,18 @@ root_check()
 UBOOT_check()
 {
 	for ((i = 0; i < 5; i++)); do
-		UBOOT_PATH=$(whiptail --title "OrangePi Build System" \
+		UBOOT_PATH=$(whiptail --title "RDA8810 Build System" \
 			--inputbox "Pls input device node of SDcard.(/dev/sdb)" \
 			10 60 3>&1 1>&2 2>&3)
 	
 		if [ $i = "4" ]; then
-			whiptail --title "OrangePi Build System" --msgbox "Error, Invalid Path" 10 40 0	
+			whiptail --title "RDA8810 Build System" --msgbox "Error, Invalid Path" 10 40 0	
 			exit 0
 		fi
 
 
 		if [ ! -b "$UBOOT_PATH" ]; then
-			whiptail --title "OrangePi Build System" --msgbox \
+			whiptail --title "RDA8810 Build System" --msgbox \
 				"The input path invalid! Pls input correct path!" \
 				--ok-button Continue 10 40 0	
 		else
@@ -85,18 +80,18 @@ BOOT_check()
 {
 	## Get mount path of u-disk
 	for ((i = 0; i < 5; i++)); do
-		BOOT_PATH=$(whiptail --title "OrangePi Build System" \
-			--inputbox "Pls input mount path of BOOT.(/media/orangepi/BOOT)" \
+		BOOT_PATH=$(whiptail --title "RDA8810 Build System" \
+			--inputbox "Pls input mount path of BOOT.(/media/RDA8810/BOOT)" \
 			10 60 3>&1 1>&2 2>&3)
 	
 		if [ $i = "4" ]; then
-			whiptail --title "OrangePi Build System" --msgbox "Error, Invalid Path" 10 40 0	
+			whiptail --title "RDA8810 Build System" --msgbox "Error, Invalid Path" 10 40 0	
 			exit 0
 		fi
 
 
 		if [ ! -d "$BOOT_PATH" ]; then
-			whiptail --title "OrangePi Build System" --msgbox \
+			whiptail --title "RDA8810 Build System" --msgbox \
 				"The input path invalid! Pls input correct path!" \
 				--ok-button Continue 10 40 0	
 		else
@@ -108,18 +103,18 @@ BOOT_check()
 ROOTFS_check()
 {
 	for ((i = 0; i < 5; i++)); do
-		ROOTFS_PATH=$(whiptail --title "OrangePi Build System" \
-			--inputbox "Pls input mount path of rootfs.(/media/orangepi/rootfs)" \
+		ROOTFS_PATH=$(whiptail --title "RDA8810 Build System" \
+			--inputbox "Pls input mount path of rootfs.(/media/RDA8810/rootfs)" \
 			10 60 3>&1 1>&2 2>&3)
 	
 		if [ $i = "4" ]; then
-			whiptail --title "OrangePi Build System" --msgbox "Error, Invalid Path" 10 40 0	
+			whiptail --title "RDA8810 Build System" --msgbox "Error, Invalid Path" 10 40 0	
 			exit 0
 		fi
 
 
 		if [ ! -d "$ROOTFS_PATH" ]; then
-			whiptail --title "OrangePi Build System" --msgbox \
+			whiptail --title "RDA8810 Build System" --msgbox \
 				"The input path invalid! Pls input correct path!" \
 				--ok-button Continue 10 40 0	
 		else
@@ -132,11 +127,11 @@ if [ ! -d $ROOT/output ]; then
     mkdir -p $ROOT/output
 fi
 
-export PLATFORM="OrangePi_2G-IOT"
+export PLATFORM="RDA8810-IOT"
 ##########################################
 ## Root Password check
 for ((i = 0; i < 5; i++)); do
-	PASSWD=$(whiptail --title "OrangePi Build System" \
+	PASSWD=$(whiptail --title "RDA8810 Build System" \
 		--passwordbox "Enter your root password. Note! Don't use root to run this scripts" \
 		10 60 3>&1 1>&2 2>&3)
 	
@@ -152,7 +147,7 @@ EOF
 	then
 		i=10
 	else
-		whiptail --title "OrangePi Build System" --msgbox "Invalid password, Pls input corrent password" \
+		whiptail --title "RDA8810 Build System" --msgbox "Invalid password, Pls input corrent password" \
 			10 40 0	--cancel-button Exit --ok-button Retry
 	fi
 done
@@ -173,7 +168,7 @@ fi
 
 MENUSTR="Pls select build option"
 
-OPTION=$(whiptail --title "OrangePi Build System" \
+OPTION=$(whiptail --title "RDA8810 Build System" \
 	--menu "$MENUSTR" 20 60 6 --cancel-button Finish --ok-button Select \
 	"0"   "Build Linux" \
 	"1"   "Build Kernel only" \
@@ -203,7 +198,7 @@ elif [ $OPTION = "4" ]; then
 	./uboot_update.sh 
 	exit 0
 else
-	whiptail --title "OrangePi Build System" \
+	whiptail --title "RDA8810 Build System" \
 		--msgbox "Pls select correct option" 10 50 0
 	exit 0
 fi
