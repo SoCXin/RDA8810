@@ -20,29 +20,32 @@ function git_configure()
 }
 
 
-if [ -z $TOP_ROOT ]; then
-    TOP_ROOT=`pwd`
-fi
-
 toolchain="https://codeload.github.com/sochub/arm-linux-eabi/zip/master"
 
-function install_toolchain()
+function get_toolchain()
 {
-    if [ ! -d $TOP_ROOT/toolchain/arm-linux-gnueabi ]; then
-        mkdir -p $TOP_ROOT/.tmp_toolchain
-        cd $TOP_ROOT/.tmp_toolchain
+    if [ ! -d $ROOT/toolchain/arm-linux-gnueabi ]; then
+        mkdir -p $ROOT/.tmp_toolchain
+        cd $ROOT/.tmp_toolchain
         curl -C - -o ./toolchain $toolchain
-        unzip $TOP_ROOT/.tmp_toolchain/toolchain
-        mkdir -p $TOP_ROOT/toolchain
-        mv $TOP_ROOT/.tmp_toolchain/arm-linux-eabi-master/gcc-arm-linux/* $TOP_ROOT/toolchain/
-        sudo chmod 755 $TOP_ROOT/toolchain -R
-        rm -rf $TOP_ROOT/.tmp_toolchain
+        unzip $ROOT/.tmp_toolchain/toolchain
+        mkdir -p $ROOT/toolchain
+        mv $ROOT/.tmp_toolchain/arm-linux-eabi-master/gcc-arm-linux/* $ROOT/toolchain/
+        sudo chmod 755 $ROOT/toolchain -R
+        rm -rf $ROOT/.tmp_toolchain
         cd -
     fi
 }
 
-git_configure
-install_toolchain
+## Check cross tools
+if [ ! -d $ROOT/toolchain/arm-linux-gnueabi ]; then
+	git_configure
+	get_toolchain
+	apt -y --no-install-recommends --fix-missing install \
+	bsdtar mtools u-boot-tools pv bc \
+	gcc automake make \
+	chmod 755 -R $ROOT/toolchain/*
+fi
 
 root_check()
 {
@@ -154,13 +157,7 @@ done
 
 echo $PASSWD | sudo ls &> /dev/null 2>&1
 
-## Check cross tools
-if [ ! -f $ROOT/output/.tmp_toolchain ]; then
-    cd $SCRIPTS
-    sudo ./Prepare_toolchain.sh
-    sudo touch $ROOT/output/.tmp_toolchain
-    cd -
-fi
+
 
 if [ ! -d $ROOT/output ]; then
     mkdir -p $ROOT/output
