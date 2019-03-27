@@ -130,12 +130,11 @@ if [ ! -d $ROOT/output ]; then
     mkdir -p $ROOT/output
 fi
 
-export PLATFORM="RDA8810-IOT"
 ##########################################
 ## Root Password check
 for ((i = 0; i < 5; i++)); do
-	PASSWD=$(whiptail --title "RDA8810 Build System" \
-		--passwordbox "Enter your root password. Note! Don't use root to run this scripts" \
+	PASSWD=$(whiptail --title "Build RDA8810 System" \
+		--passwordbox "Enter root password instead of using sudo to run this!" \
 		10 60 3>&1 1>&2 2>&3)
 	
 	if [ $i = "4" ]; then
