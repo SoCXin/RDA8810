@@ -20,20 +20,12 @@ function git_configure()
 }
 
 
-toolchain="https://codeload.github.com/sochub/arm-linux-eabi/zip/master"
-
 function get_toolchain()
-{
-    if [ ! -d $ROOT/toolchain/arm-linux-gnueabi ]; then
-        mkdir -p $ROOT/.tmp_toolchain
-        cd $ROOT/.tmp_toolchain
-        curl -C - -o ./toolchain $toolchain
-        unzip $ROOT/.tmp_toolchain/toolchain
-        mkdir -p $ROOT/toolchain
-        mv $ROOT/.tmp_toolchain/arm-linux-eabi-master/gcc-arm-linux/* $ROOT/toolchain/
-        sudo chmod 755 $ROOT/toolchain -R
-        rm -rf $ROOT/.tmp_toolchain
-        cd -
+{ 
+    	if [ ! -d $ROOT/toolchain/arm-linux-gnueabi ]; then
+	cd $ROOT
+	git clone --depth=1 https://github.com/sochub/arm-linux-eabi.git
+        mv $ROOT/arm-linux-eabi $ROOT/toolchain
     fi
 }
 
