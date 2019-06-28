@@ -19,6 +19,13 @@ function git_configure()
     export GIT_TRACE=1    
 }
 
+function gcc_prepare()
+{ 
+	sudo apt -y --no-install-recommends --fix-missing install \
+	bsdtar mtools u-boot-tools pv bc \
+	gcc automake make \
+	sudo apt install -y lib32z1
+}
 
 function get_toolchain()
 { 
@@ -33,10 +40,8 @@ function get_toolchain()
 if [ ! -d $ROOT/toolchain/arm-linux-gnueabi ]; then
 	git_configure
 	get_toolchain
-	apt -y --no-install-recommends --fix-missing install \
-	bsdtar mtools u-boot-tools pv bc \
-	gcc automake make \
-	chmod 755 -R $ROOT/toolchain/*
+	gcc_prepare
+	#chmod 755 -R $ROOT/toolchain/*
 fi
 
 root_check()
